@@ -16,7 +16,7 @@ Reference for details.
 
 
 
-### The Accelerator Job in Brief
+# The Accelerator Job in Brief
 
 The _job_ is the atomic unit of program execution on the Accelerator.
 Jobs are powerful, they can execute parallel code, read and store
@@ -34,7 +34,7 @@ operates on the job data.
 
 
 
-#### Job Build is Conditional
+## Job Build is Conditional
 A job is only built if it has not been built before, see figure below.
 
 <p align="center"><img src="{{ site.url }}/assets/build_conditional.svg"> </p>
@@ -53,7 +53,7 @@ request is compared to this database.
 
 
 
-#### Inputs to the Build Call
+## Inputs to the Build Call
 There are three types of input to a job at build time:
 
  - the program source code,
@@ -65,7 +65,7 @@ All of these are used to check if a job has been built already.
 
 
 
-#### Job Building Process
+## Job Building Process
 
 When a job is being built, the following happens:
 
@@ -84,7 +84,7 @@ this reason, jobs are transparent and easily observable.
 
 
 
-### Job Dependencies
+# Job Dependencies
 
 A complex processing task can be divided into a number of different
 jobs, making the task easier to write, test, and maintain.  A job
@@ -133,7 +133,7 @@ re-executing any code.
 
 
 
-### Why this Build System?
+# Why this Build System?
 
 The Accelerator's build system is designed for _reproducibility_.  The
 same input to the same program should lead to the same output --
@@ -148,7 +148,7 @@ important features that we'll describe in the following sections.
 
 
 
-#### Observability and Transparency
+## Observability and Transparency
 
 All Information About a Job is Stored Together in a Single Directory.
 Having all _results_, _source code_, _parameters_, and _profiling
@@ -160,7 +160,7 @@ a particular result.
 
 
 
-#### Saving Execution Time
+## Saving Execution Time
 
 Completed jobs will be _re-used_ if possible.  This **saves time** and
 energy.
@@ -173,7 +173,7 @@ again saves time.
 
 
 
-#### Reproducibility and Transparency
+## Reproducibility and Transparency
 
 The build system guarantees that *parts affected by a modification
 will be re-executed*.  Assuming the build script has been run after a
@@ -184,7 +184,7 @@ code that has been used to compute any result.
 
 
 
-#### Automation
+## Automation
 
 The Accelerator is designed _both_ for various analysis tasks _and_ to
 run as a live production system.  The build script is an efficient way
@@ -214,7 +214,7 @@ with a minimum of unneccessary re-executions.
 
 
 
-#### Design Methodology
+## Design Methodology
 
 A good development strategy is to design incrementally, adding one job
 after the other that share intermediate results.  This fits perfectly
@@ -228,7 +228,7 @@ book-keeping intermediate results.
 
 
 
-### Conclusion
+# Conclusion
 
 There are several benefits with the Accelerator's build system, of
 which the most important is that it brings _reproducibility_ and

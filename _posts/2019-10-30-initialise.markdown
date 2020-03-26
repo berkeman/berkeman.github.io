@@ -8,7 +8,7 @@ categories: documentation
 
 This HOWTO shows how to install and test the Accelerator.
 
-#### [TL;DR](https://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn%27t_read)
+## [TL;DR](https://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn%27t_read)
 ```sh
 # install
 pip install accelerator
@@ -23,7 +23,7 @@ ax run tests
 
 
 
-### Install Using pip
+# Install Using pip
 
 Using `pip`, the Accelerator is installed just like any other package.
 Installation can be global, local, or in a virtual environment.
@@ -52,7 +52,7 @@ the active virtual environment, `accvenv`.
 
 
 
-### Set up a Simple Project
+# Set up a Simple Project
 
 Now that the Accelerator is installed, let's create a simple project.
 Each project should have its own directory, so we use `mkdir` to
@@ -74,7 +74,7 @@ how to run the built-in tests.
 
 
 
-### What's in the Project Directory
+# What's in the Project Directory
 
 If we do a `ls -F` in the `myproject` directory, we'll find the
 following files and directories that are of key importance
@@ -98,7 +98,7 @@ directory when running any command.
 
 
 
-#### The Configuration File
+## The Configuration File
 
 The configuration file comes with pretty detailed inline documentation
 that we've chosen to not show here for brevity reasons.  Instead,
@@ -106,7 +106,7 @@ we'll walk through the file and comment the things that are important
 at this stage.
 
 
-##### slices
+### slices
 
 First, the file specifies the number of _slices_.  This number
 stipulates how many processes the Accelerator will run in parallel.
@@ -118,7 +118,7 @@ slices: 8
 ```
 
 
-##### workdirs
+### workdirs
 
 ```text
 workdirs:
@@ -136,7 +136,7 @@ definitions.
 
 
 
-##### target workdir
+### target workdir
 
 ```text
 target workdir: dev
@@ -146,7 +146,7 @@ The `target workdir` specifies in which workdir jobs are stored by
 default.  It is not mandatory, but it is good practice to use it.
 
 
-##### method packages
+### method packages
 
 ```text
 method packages:
@@ -164,7 +164,7 @@ then two packages from the Accelerator installation:
 `standard_methods` and `test_methods`.
 
 
-##### result and input directories
+### result and input directories
 ```text
 result directory: /home/ab/myproject/results
 input directory: # /some/path where you want import methods to look.
@@ -181,7 +181,7 @@ store important output files for convenient access.
 
 
 
-### Starting the Server Process
+# Starting the Server Process
 
 When we are satisfied with the configuration file, it is time to start
 the Accelerator server process.  The Accelerator is based on a
@@ -201,7 +201,7 @@ that from a new terminal.
 
 
 
-### Running the Built-in Tests
+# Running the Built-in Tests
 
 If you have not done so already, please launch a new terminal ([gnu
 screen](https://www.gnu.org/software/screen/) or
@@ -230,7 +230,7 @@ this and make sure all character encoding tests are run successfully.
 
 
 
-### Running Arbitrary programs:  The dev package
+# Running Arbitrary programs:  The dev package
 
 New project code is put in the `dev/` directory.  The `init` command
 has already put a minimal example there that can be examined and
@@ -267,7 +267,7 @@ ax run
 
 
 
-### Install from GitHub
+# Install from GitHub
 
 It is also possible to install directly from the git repository.
 

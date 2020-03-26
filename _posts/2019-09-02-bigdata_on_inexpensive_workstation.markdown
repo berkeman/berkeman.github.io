@@ -34,7 +34,7 @@ programs faster and shorten design iteration time.
 
 
 
-### The Accelerator Framework
+# The Accelerator Framework
 
 The Accelerator is a minimalistic framework with a small footprint
 that runs on anything from 32-bit Raspberry Pies to 64 bit multi core
@@ -50,7 +50,7 @@ customers, since 2012.
 
 
 
-### Hardware for the Accelerator
+# Hardware for the Accelerator
 
 What is a good hardware platform for data processing?  As mentioned
 earlier, a laptop may do, but if we are free to choose our computer,
@@ -78,7 +78,7 @@ the data should at least be detected (and preferably corrected).
 
 
 
-### An Example:  Recycling a Lenovo D20 Workstation from 2011
+# An Example:  Recycling a Lenovo D20 Workstation from 2011
 
 This machine is cheap, reliable, and powerful, and actually compares
 well to modern machines, which we will show in a future post.  We
@@ -115,7 +115,7 @@ continuous writes exceeding 1.2GB/s.)
 
 
 
-### Performance Testing
+# Performance Testing
 
 The Accelerator installation repository comes with a simple
 performance testing script that we have used for the testing.  The
@@ -131,7 +131,7 @@ execution time is measured.
 The size of the one billion line dataset is 79 GiB (36 GiB compressed).
 
 
-### Test Results
+# Test Results
 
 Here is the complete output from the build script.
 
@@ -180,7 +180,7 @@ time, including data generation, is less than one hour (3235 seconds).
 Let us take a closer look at what happens during testing:
 
 
-#### 1. csvexport
+## 1. csvexport
 
 The script starts by creating a one-billion line dataset in the
 Accelerator's internal dataset format.  All this data is then fed to
@@ -190,7 +190,7 @@ runs at a data rate of almost 1.5 million rows per second, or 115
 MB/s.  The resulting output is a 36GiB compressed CSV file.
 
 
-#### 2. import and typing
+## 2. import and typing
 
 The CSV file is then imported again using the `csvimport` method,
 followed by typing of the data using `dataset_type`.  Importing runs
@@ -201,7 +201,7 @@ to a coffee-break.  To be specific, it takes **15 minutes (913
 seconds)** to import and type the complete dataset.
 
 
-#### 3. sum
+## 3. sum
 
 When imported, the dataset is ready for calculations.  The testing
 begins with adding all values in single columns together.  The test
@@ -230,14 +230,14 @@ above the disk to memory transfer rate.
   advantage of cache prefetching and minimises seek times.
 
 
-#### 4. sum positive
+## 4. sum positive
 
 This test adds a data dependency.  Numbers are added only if they are
 positive.  These tests are significantly slower, but still they
 consume data at rates between 50-100 million lines per second.
 
 
-#### 5. histogram
+## 5. histogram
 
 This part uses the Python
 [Counter](https://docs.python.org/3/library/collections.html) class to
@@ -247,7 +247,7 @@ per second, **creating a histogram of a billion 64-bit floats in about
 45 seconds!**
 
 
-#### 6. find string
+## 6. find string
 
 Check for existence of a four character string in a billion random
 strings of length 10.  This runs at a rate **exceeding 80 million rows
@@ -255,7 +255,7 @@ per second** (i.e. 800MB/s).  (The number of strings found is less
 than one in a million, which is in line with theory.)
 
 
-#### 7. Total Test Time
+## 7. Total Test Time
 
 Assuming the input data was available on disk in a CSV-like format,
 **importing the data and running all the tests took less than 20
@@ -266,7 +266,7 @@ lower.
 
 
 
-### Conclusion
+# Conclusion
 
 The Accelerator can handle large datasets at high speed on inexpensive
 hardware.  Being able to create a histogram of a billion values in

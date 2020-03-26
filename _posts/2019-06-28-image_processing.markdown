@@ -25,7 +25,7 @@ network inference, will be discussed in an upcoming post.
 
 
 
-### Parallel Image Processing Example
+# Parallel Image Processing Example
 
 A simple example is that of creating image thumbnails (i.e. downscaled
 copies) of a large set of (larger) images.  The figure below depicts
@@ -53,7 +53,7 @@ straight-forward solution.
 
 
 
-### Straightforward Parallel Program
+# Straightforward Parallel Program
 
 The downscaling program receives a list of images to process as input,
 and outputs a set of thumbnail image files.  To make most use of the
@@ -101,7 +101,7 @@ modern laptop with four cores.
 
 
 
-### Using More of the Accelerator's Features
+# Using More of the Accelerator's Features
 
 The program in the previous section provides a simple but efficient
 solution to the thumbnails task.  In this section, we'll introduce
@@ -152,7 +152,7 @@ look at the import program
 
 
 
-#### The Import Program
+## The Import Program
 
 The import program is much like the first thumbnailing program
 presented earlier, but instead of writing output images to files, it
@@ -172,7 +172,7 @@ other.  Now we move on to the more interesting part.
 
 
 
-#### The Image Processing part: Thumbnailing
+## The Image Processing part: Thumbnailing
 
 With images and metadata available in a dataset, we can work on a
 higher, yet efficient, abstraction level and focus on the actual image
@@ -203,7 +203,7 @@ performance reasons.)
 
 
 
-##### Diversion: Computing a Histogram of Image Shapes
+### Diversion: Computing a Histogram of Image Shapes
 
 It is tempting to show how easy it is to start doing data analysis now
 that we have the imported image dataset.  The code below will compute
@@ -235,7 +235,7 @@ shapes hashable.)
 
 
 
-#### Exporting Images in a Dataset back to Files
+## Exporting Images in a Dataset back to Files
 
 Finally, we need a way to generate image files from a dataset.  Such a
 program may be visualised like this
@@ -250,7 +250,7 @@ filename.
 
 
 
-### Source Code
+# Source Code
 
 The current release of the Accelerator does not include explicit
 support for images.  The main reason being that the Accelerator comes
@@ -280,7 +280,7 @@ relatively large files.
 
 
 
-#### Import
+## Import
 
 
 The program starts with a single process executing the `prepare()`
@@ -335,7 +335,7 @@ image size.
 
 
 
-#### Thumbnailer
+## Thumbnailer
 
 Below is the complete `thumbnailer` program.
 ```python
@@ -375,7 +375,7 @@ data.
 
 
 
-#### Export
+## Export
 
 The following program is complete and minimal.  Files are written to
 disk in the internal format, i.e. BMP, and the filename extension is
@@ -396,7 +396,7 @@ def analysis(sliceno):
 
 
 
-### Conclusion
+# Conclusion
 This post illustrates how the Accelerator can parallel process binary
 image files.  Although the minimalistic design principles behind the
 Accelerator has left it without explicit image processing support, it

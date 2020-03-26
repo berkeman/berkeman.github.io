@@ -13,7 +13,7 @@ speed given these hardware constraints.
 
 
 
-### The problem
+# The problem
 
 Assume that we have a large dataset stored on disk, and that we want
 to process it as fast as possible.  Fast data processing is important
@@ -26,7 +26,7 @@ for several reasons, for example
 and so on.
 
 
-### What is Limiting Execution Time?
+# What is Limiting Execution Time?
 
 On a high level, a computer is composed of storage (disk, memory),
 processing (CPU) hardware, and interconnects there between, see figure
@@ -48,7 +48,7 @@ at how it works and what can be done.
 
 
 
-### Storage:  Random Access Versus Streaming
+# Storage:  Random Access Versus Streaming
 
 First, we note that the disk accessing pattern matters.  There is a
 significant average access time associated with accessing a random
@@ -66,7 +66,7 @@ technology, but at a significantly higher cost.
 
 
 
-#### Access Times Matters
+## Access Times Matters
 
 One way to store the data to be analysed is to use a traditional
 relational database.  Such databases are designed for random access.
@@ -92,7 +92,7 @@ than random access, streaming is better if we process as little as
 
 
 
-### Disk Throughput:  How Fast can we Read from Disk?
+# Disk Throughput:  How Fast can we Read from Disk?
 
 The next thing to look at is how fast we can stream data from disk
 to memory.  The minimalistic way to read data very fast from disk is
@@ -112,7 +112,7 @@ On a "standard" computer, we reach a few 100MB/s throughput.
 
 
 
-#### Maximizing Throughput
+## Maximizing Throughput
 
 With the disk bandwidth saturated, we can transfer more useful
 _information_ per second by compressing the data on disk:
@@ -139,7 +139,7 @@ hide memory accessing times.
 
 
 
-#### Can we go Faster?
+## Can we go Faster?
 
 Well, as soon as we start to process the data, the CPU load will go
 up, and we realize that processing speed of the CPU will be the new
@@ -160,7 +160,7 @@ memory bandwidth:
 
 
 
-#### RAM is Faster than Disk
+## RAM is Faster than Disk
 
 It makes sense to have a computer with lots of RAM in it.  Operating
 systems such as Linux or FreeBSD use unallocated RAM for disk buffers
@@ -185,7 +185,7 @@ the source data fits into RAM.
 
 
 
-### The Accelerator Approach
+# The Accelerator Approach
 
 The important tricks that we've just seen are used by the Accelerator to
 maximize data read and write performance, in particular:
@@ -202,7 +202,7 @@ In addition, the Accelerator
 
 
 
-#### One File Per Column
+## One File Per Column
 
 A dataset may typically have several columns containing different
 information.  Each processing/analysis task typically uses only a few
@@ -219,7 +219,7 @@ in light gray.
 
 
 
-#### Optimised Storage Format
+## Optimised Storage Format
 
 Data can be stored very efficiently on disk.  If we know that a data
 column only contains, say, 64 bit floats, we can write that
@@ -236,7 +236,7 @@ time to a minimum.
 
 
 
-#### Data Partitioning using a Hash Function
+## Data Partitioning using a Hash Function
 
 Using a hash function to determine which data row that goes into which
 slice is a simple way to pave the way for entirely independent
@@ -265,7 +265,7 @@ hash partitioning a dataset is a relatively fast operation.
 
 
 
-### Some Performance Figures
+# Some Performance Figures
 
 The fastest machine we've used produced these numbers in 2017 on an
 example file with one billion lines and six columns, in total 79GB in
@@ -286,7 +286,7 @@ Accelerator.
 
 
 
-### Summary
+# Summary
 
 The Accelerator is using a set of low level basic techniques such as
 compression, slicing, partitioning, and parallel execution to mitigate
