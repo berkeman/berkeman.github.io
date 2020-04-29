@@ -30,7 +30,7 @@ The complete source code is available on
 
 The Kaggle dataset is composed of JSON-files, one file per paper.  In
 total there are more than 68.000 files spread over several
-directories.  The pre-processing proposed her converts all these files
+directories.  The pre-processing proposed here converts all these files
 into one Comma Separated Values (CSV) file.  (Actually, the separator
 could be any character.)  Various NLP-preprocessing tricks such as
 conversion to lowercase and tokenisation can also be carried out in
@@ -71,7 +71,7 @@ them, and writes them to a common dataset.  The method is called once
 for every directory containing JSON files, and all resulting datasets
 are chained.  Finally, the bundled `csvexport` method is used to
 convert the resulting dataset chain into a CSV-like file.  This method
-has options for selection of separator, citations, and more.
+has options for selection of separator, quotings, and more.
 
 
 
