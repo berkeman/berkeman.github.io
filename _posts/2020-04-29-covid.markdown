@@ -82,7 +82,7 @@ processing takes **61 seconds**.
 
 (A [2009 Lenovo
 workstation](https://expertmakeraccelerator.org/performance/2019/09/02/bigdata_on_inexpensive_workstation.html)
-is more than twice as fast and at half the price of the laptop!)
+will run this in *17 seconds*, at half the price of the laptop!)
 
 
 
