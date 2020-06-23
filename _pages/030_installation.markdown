@@ -13,8 +13,8 @@ See this [blog post](https://exax.org/documentation/2019/10/30/initialise.html) 
 
 The Accelerator projects has been built, tested, and runs on:
 
- - Ubuntu16.04, 18.04
- - and Debian 9, 10
+ - Ubuntu 16.04, 18.04
+ - Debian 9, 10
  - FreeBSD 11.3, 12.1
 
 but is not limited to these systems or versions.
