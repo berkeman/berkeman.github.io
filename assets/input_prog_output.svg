@@ -1,0 +1,47 @@
+<?xml version="1.0" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2.6a -->
+<!-- CreationDate: 2020-07-12 19:15:52 -->
+<!-- Magnification: 1.05 -->
+<svg	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="337pt" height="94pt"
+	viewBox="3315 1373 5345 1484">
+<g fill="none">
+<!-- Ellipse -->
+<ellipse cx="6142" cy="2137" rx="652" ry="292"
+	stroke="#606c71" stroke-width="15px"/>
+<!-- Line -->
+<rect x="3375" y="1395" width="1080" height="1440"
+	stroke="#606c71" stroke-width="15px"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp0">
+	<path clip-rule="evenodd" d="M 3315,1373 H 8660 V 2857 H 3315 z
+		M 5264,2085 5264,2145 5411,2126 5411,2105z"/>
+</clipPath>
+</defs>
+<polyline points=" 4545,2115 5400,2115" clip-path="url(#cp0)"
+	stroke="#606c71" stroke-width="15px"/>
+<!-- Forward arrow to point 5400,2115 -->
+<polygon points=" 5264,2145 5384,2115 5264,2085 5264,2145"
+	stroke="#606c71" stroke-width="8px" stroke-miterlimit="8" fill="#606c71"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp1">
+	<path clip-rule="evenodd" d="M 3315,1373 H 8660 V 2857 H 3315 z
+		M 7604,2085 7604,2145 7751,2126 7751,2105z"/>
+</clipPath>
+</defs>
+<polyline points=" 6885,2115 7740,2115" clip-path="url(#cp1)"
+	stroke="#606c71" stroke-width="15px"/>
+<!-- Forward arrow to point 7740,2115 -->
+<polygon points=" 7604,2145 7724,2115 7604,2085 7604,2145"
+	stroke="#606c71" stroke-width="8px" stroke-miterlimit="8" fill="#606c71"/>
+<!-- Text -->
+<text xml:space="preserve" x="6165" y="2205" fill="#606c71" font-family="Helvetica" font-style="normal" font-weight="normal" font-size="240" text-anchor="middle">program</text>
+<!-- Text -->
+<text xml:space="preserve" x="3915" y="1710" fill="#606c71" font-family="Helvetica" font-style="normal" font-weight="normal" font-size="240" text-anchor="middle">data file</text>
+<!-- Text -->
+<text xml:space="preserve" x="7830" y="2205" fill="#606c71" font-family="Helvetica" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">result</text>
+</g>
+</svg>

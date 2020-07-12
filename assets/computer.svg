@@ -1,82 +1,63 @@
 <?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
-<!-- CreationDate: Mon Jun 24 21:15:32 2019 -->
-<!-- Magnification: 1.050 -->
+<!-- Creator: fig2dev Version 3.2.6a -->
+<!-- CreationDate: 2020-07-12 19:15:52 -->
+<!-- Magnification: 1.05 -->
 <svg	xmlns="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
-	width="6.6in" height="1.8in"
-	viewBox="596 8858 7977 2124">
-<g style="stroke-width:.025in; fill:none">
+	width="479pt" height="128pt"
+	viewBox="568 8438 7599 2024">
+<g fill="none">
 <!-- Circle -->
-<circle cx="1133" cy="9921" r="406"
- style="stroke:#606c71;stroke-width:16;"/>
+<circle cx="1080" cy="9450" r="387"
+	stroke="#606c71" stroke-width="15px"/>
 <!-- Circle -->
-<circle cx="1133" cy="9921" r="133"
- style="stroke:#606c71;stroke-width:16;"/>
+<circle cx="1080" cy="9450" r="127"
+	stroke="#606c71" stroke-width="15px"/>
 <!-- Line -->
-<polyline points="2078,9921
-3496,9921
-" style="stroke:#606c71;stroke-width:16;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
-<!-- Arrowhead on XXXpoint 2078 9921 - 3716 9921-->
-<polygon points="3510 9968
-3699 9921
-3510 9874
-3510 9968
-
-" style="stroke:#606c71;stroke-width:8;stroke-miterlimit:8;
-fill:#606c71;"/>
+<defs>
+<clipPath id="cp0">
+	<path clip-rule="evenodd" d="M 568,8438 H 8167 V 10462 H 568 z
+		M 3314,9405 3314,9495 3521,9461 3521,9440z"/>
+</clipPath>
+</defs>
+<polyline points=" 1980,9450 3510,9450" clip-path="url(#cp0)"
+	stroke="#606c71" stroke-width="15px"/>
+<!-- Forward arrow to point 3510,9450 -->
+<polygon points=" 3314,9495 3494,9450 3314,9405 3314,9495"
+	stroke="#606c71" stroke-width="8px" stroke-miterlimit="8" fill="#606c71"/>
 <!-- Line -->
-<polyline points="5858,9921
-7275,9921
-" style="stroke:#606c71;stroke-width:16;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
-<!-- Arrowhead on XXXpoint 5858 9921 - 7496 9921-->
-<polygon points="7290 9968
-7479 9921
-7290 9874
-7290 9968
-
-" style="stroke:#606c71;stroke-width:8;stroke-miterlimit:8;
-fill:#606c71;"/>
-<!-- Line: box -->
-<rect x="7606" y="9448" width="944" height="944" rx="62" 
-style="stroke:#606c71;stroke-width:16;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
-<!-- Line: box -->
-<rect x="3826" y="8881" width="1889" height="2078" rx="62" 
-style="stroke:#606c71;stroke-width:16;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
+<defs>
+<clipPath id="cp1">
+	<path clip-rule="evenodd" d="M 568,8438 H 8167 V 10462 H 568 z
+		M 6914,9405 6914,9495 7121,9461 7121,9440z"/>
+</clipPath>
+</defs>
+<polyline points=" 5580,9450 7110,9450" clip-path="url(#cp1)"
+	stroke="#606c71" stroke-width="15px"/>
+<!-- Forward arrow to point 7110,9450 -->
+<polygon points=" 6914,9495 7094,9450 6914,9405 6914,9495"
+	stroke="#606c71" stroke-width="8px" stroke-miterlimit="8" fill="#606c71"/>
 <!-- Line -->
-<polygon points="1606,10251
-1370,9874
-1700,10157
-1700,10251
-1606,10251
-" style="stroke:#606c71;stroke-width:16;
-stroke-linejoin:miter; stroke-linecap:butt;
-fill:#ffffff;
-"/>
-<!-- Line: box -->
-<rect x="661" y="9448" width="1275" height="944" rx="62" 
-style="stroke:#606c71;stroke-width:16;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
+<rect x="7245" y="9000" width="900" height="900" rx="60"
+	stroke="#606c71" stroke-width="15px"/>
+<!-- Line -->
+<rect x="3645" y="8460" width="1800" height="1980" rx="60"
+	stroke="#606c71" stroke-width="15px"/>
+<!-- Line -->
+<polygon points=" 1530,9765 1305,9405 1620,9675 1620,9765" fill="#ffffff"
+	stroke="#606c71" stroke-width="15px"/>
+<!-- Line -->
+<rect x="630" y="9000" width="1215" height="900" rx="60"
+	stroke="#606c71" stroke-width="15px"/>
 <!-- Text -->
-<text xml:space="preserve" x="2834" y="9826" fill="#606c71"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="227" text-anchor="middle">100+ MB/s</text>
+<text xml:space="preserve" x="2700" y="9360" fill="#606c71" font-family="Helvetica" font-style="normal" font-weight="normal" font-size="216" text-anchor="middle">100+ MB/s</text>
 <!-- Text -->
-<text xml:space="preserve" x="6661" y="9826" fill="#606c71"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="227" text-anchor="middle">1000+ MB/s</text>
+<text xml:space="preserve" x="6345" y="9360" fill="#606c71" font-family="Helvetica" font-style="normal" font-weight="normal" font-size="216" text-anchor="middle">1000+ MB/s</text>
 <!-- Text -->
-<text xml:space="preserve" x="8078" y="10015" fill="#606c71"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="227" text-anchor="middle">CPU</text>
+<text xml:space="preserve" x="7695" y="9540" fill="#606c71" font-family="Helvetica" font-style="normal" font-weight="normal" font-size="216" text-anchor="middle">CPU</text>
 <!-- Text -->
-<text xml:space="preserve" x="4771" y="10015" fill="#606c71"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="227" text-anchor="middle">Memory</text>
+<text xml:space="preserve" x="4545" y="9540" fill="#606c71" font-family="Helvetica" font-style="normal" font-weight="normal" font-size="216" text-anchor="middle">Memory</text>
 <!-- Text -->
-<text xml:space="preserve" x="1322" y="9354" fill="#606c71"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="227" text-anchor="middle">Hard drive</text>
+<text xml:space="preserve" x="1260" y="8910" fill="#606c71" font-family="Helvetica" font-style="normal" font-weight="normal" font-size="216" text-anchor="middle">Hard drive</text>
 </g>
 </svg>

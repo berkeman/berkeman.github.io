@@ -1,0 +1,53 @@
+<?xml version="1.0" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2.6a -->
+<!-- CreationDate: 2020-07-12 19:15:52 -->
+<!-- Magnification: 1.05 -->
+<svg	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="349pt" height="168pt"
+	viewBox="9878 4343 5540 2665">
+<g fill="none">
+<!-- Line -->
+<polygon points=" 9900,6075 9900,6840 10800,6840 10800,6165 10125,6165 10080,6075"
+	stroke="#606c71" stroke-width="15px"/>
+<!-- Line -->
+<polygon points=" 10891,6435 11386,6390 11386,6300 11611,6480 11386,6660 11386,6570 10891,6525
+" fill="#606c71"
+	stroke="#606c71" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 12420,5625 12420,5445 12330,5445 12510,5220 12690,5445 12600,5445 12600,5670
+" fill="#606c71"
+	stroke="#606c71" stroke-width="8px"/>
+<!-- Line -->
+<polyline points=" 12420,5580 12420,5715 12330,5715 12510,5940 12690,5715 12600,5715 12600,5580
+" fill="#606c71"
+	stroke="#606c71" stroke-width="8px"/>
+<!-- Line -->
+<polygon points=" 13410,6435 13905,6390 13905,6300 14130,6480 13905,6660 13905,6570 13410,6525
+" fill="#606c71"
+	stroke="#606c71" stroke-width="8px"/>
+<!-- Line -->
+<polygon points=" 14220,6075 14220,6840 15120,6840 15120,6165 14445,6165 14400,6075"
+	stroke="#606c71" stroke-width="15px"/>
+<!-- Line -->
+<polygon points=" 12060,4365 12060,5130 12960,5130 12960,4455 12285,4455 12240,4365"
+	stroke="#606c71" stroke-width="15px"/>
+<!-- Line -->
+<rect x="11700" y="6030" width="1620" height="945"
+	stroke="#606c71" stroke-width="30px"/>
+<!-- Text -->
+<text xml:space="preserve" x="9945" y="6660" fill="#606c71" font-family="Helvetica" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">directory</text>
+<!-- Text -->
+<text xml:space="preserve" x="14265" y="6660" fill="#606c71" font-family="Helvetica" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">directory</text>
+<!-- Text -->
+<text xml:space="preserve" x="12510" y="6570" fill="#606c71" font-family="Helvetica" font-style="normal" font-weight="normal" font-size="216" text-anchor="middle">Accelerator</text>
+<!-- Text -->
+<text xml:space="preserve" x="9945" y="6435" fill="#606c71" font-family="Helvetica" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">input</text>
+<!-- Text -->
+<text xml:space="preserve" x="14265" y="6435" fill="#606c71" font-family="Helvetica" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">result</text>
+<!-- Text -->
+<text xml:space="preserve" x="12105" y="4950" fill="#606c71" font-family="Helvetica" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">directory</text>
+<!-- Text -->
+<text xml:space="preserve" x="12105" y="4725" fill="#606c71" font-family="Helvetica" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">work</text>
+</g>
+</svg>

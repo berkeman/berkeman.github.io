@@ -1,94 +1,74 @@
 <?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
-<!-- CreationDate: Mon Nov 25 11:16:21 2019 -->
-<!-- Magnification: 1.050 -->
+<!-- Creator: fig2dev Version 3.2.6a -->
+<!-- CreationDate: 2020-07-12 19:15:52 -->
+<!-- Magnification: 1.05 -->
 <svg	xmlns="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
-	width="3.2in" height="2.3in"
-	viewBox="11751 8953 3847 2722">
-<g style="stroke-width:.025in; fill:none">
+	width="231pt" height="164pt"
+	viewBox="11193 8528 3665 2593">
+<g fill="none">
 <!-- Ellipse -->
-<ellipse transform="translate(14881,10697) rotate(-0.00000000)" rx="708" ry="283"
- style="stroke:#b00000;stroke-width:8;"/>
+<ellipse cx="14175" cy="10189" rx="675" ry="270"
+	stroke="#b00000" stroke-width="8px"/>
 <!-- Line -->
-<polyline points="14409,9448
-14881,9448
-14881,10267
-" style="stroke:#b00000;stroke-width:8;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
-<!-- Arrowhead on XXXpoint 14881 9448 - 14881 10409-->
-<polygon points="14850 10266
-14881 10392
-14913 10266
-14850 10266
-
-" style="stroke:#b00000;stroke-width:8;stroke-miterlimit:8;
-fill:#b00000;"/>
+<defs>
+<clipPath id="cp0">
+	<path clip-rule="evenodd" d="M 11193,8528 H 14858 V 11121 H 11193 z
+		M 14205,9764 14145,9764 14168,9907 14182,9907z"/>
+</clipPath>
+</defs>
+<polyline points=" 13725,9000 14175,9000 14175,9900" clip-path="url(#cp0)"
+	stroke="#b00000" stroke-width="8px"/>
+<!-- Forward arrow to point 14175,9900 -->
+<polygon points=" 14145,9764 14175,9884 14205,9764 14145,9764"
+	stroke="#b00000" stroke-width="8px" stroke-miterlimit="8" fill="#b00000"/>
 <!-- Line -->
-<polyline points="11811,9448
-12944,9448
-" style="stroke:#000000;stroke-width:8;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
+<polyline points=" 11250,9000 12330,9000"
+	stroke="#000000" stroke-width="8px"/>
 <!-- Line -->
-<polyline points="14881,11007
-14881,11338
-11935,11338
-" style="stroke:#b00000;stroke-width:8;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
-<!-- Arrowhead on XXXpoint 14881 11338 - 11795 11338-->
-<polygon points="11938 11307
-11812 11338
-11938 11370
-11938 11307
-
-" style="stroke:#b00000;stroke-width:8;stroke-miterlimit:8;
-fill:#b00000;"/>
+<defs>
+<clipPath id="cp1">
+	<path clip-rule="evenodd" d="M 11193,8528 H 14858 V 11121 H 11193 z
+		M 11386,10830 11386,10770 11243,10793 11243,10807z"/>
+</clipPath>
+</defs>
+<polyline points=" 14175,10485 14175,10800 11250,10800" clip-path="url(#cp1)"
+	stroke="#b00000" stroke-width="8px"/>
+<!-- Forward arrow to point 11250,10800 -->
+<polygon points=" 11386,10770 11266,10800 11386,10830 11386,10770"
+	stroke="#b00000" stroke-width="8px" stroke-miterlimit="8" fill="#b00000"/>
 <!-- Line -->
-<polygon points="12992,9448
-13700,8976
-14409,9448
-13700,9921
-12992,9448
-" style="stroke:#606c71;stroke-width:16;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
+<polygon points=" 12375,9000 13050,8550 13725,9000 13050,9450"
+	stroke="#606c71" stroke-width="15px"/>
 <!-- Line -->
-<polyline points="13700,9921
-13700,10393
-11888,10393
-" style="stroke:#00b000;stroke-width:8;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
-<!-- Arrowhead on XXXpoint 13700 10393 - 11748 10393-->
-<polygon points="11890 10362
-11764 10393
-11890 10425
-11890 10362
-
-" style="stroke:#00b000;stroke-width:8;stroke-miterlimit:8;
-fill:#00b000;"/>
+<defs>
+<clipPath id="cp2">
+	<path clip-rule="evenodd" d="M 11193,8528 H 14858 V 11121 H 11193 z
+		M 11341,9930 11341,9870 11198,9893 11198,9907z"/>
+</clipPath>
+</defs>
+<polyline points=" 13050,9450 13050,9900 11205,9900" clip-path="url(#cp2)"
+	stroke="#00b000" stroke-width="8px"/>
+<!-- Forward arrow to point 11205,9900 -->
+<polygon points=" 11341,9870 11221,9900 11341,9930 11341,9870"
+	stroke="#00b000" stroke-width="8px" stroke-miterlimit="8" fill="#00b000"/>
 <!-- Text -->
-<text xml:space="preserve" x="13700" y="9779" fill="#606c71"  font-family="AvantGarde" font-style="normal" font-weight="normal" font-size="227" text-anchor="middle">?</text>
+<text xml:space="preserve" x="13050" y="9315" fill="#606c71" font-family="AvantGarde" font-style="normal" font-weight="normal" font-size="216" text-anchor="middle">?</text>
 <!-- Text -->
-<text xml:space="preserve" x="13700" y="9354" fill="#606c71"  font-family="AvantGarde" font-style="normal" font-weight="normal" font-size="227" text-anchor="middle">result</text>
+<text xml:space="preserve" x="13050" y="8910" fill="#606c71" font-family="AvantGarde" font-style="normal" font-weight="normal" font-size="216" text-anchor="middle">result</text>
 <!-- Text -->
-<text xml:space="preserve" x="13700" y="9543" fill="#606c71"  font-family="AvantGarde" font-style="normal" font-weight="normal" font-size="227" text-anchor="middle">exists</text>
+<text xml:space="preserve" x="13050" y="9090" fill="#606c71" font-family="AvantGarde" font-style="normal" font-weight="normal" font-size="216" text-anchor="middle">exists</text>
 <!-- Text -->
-<text xml:space="preserve" x="14834" y="9685" fill="#b00000"  font-family="AvantGarde" font-style="normal" font-weight="normal" font-size="227" text-anchor="end">NO</text>
+<text xml:space="preserve" x="14130" y="9225" fill="#b00000" font-family="AvantGarde" font-style="normal" font-weight="normal" font-size="216" text-anchor="end">NO</text>
 <!-- Text -->
-<text xml:space="preserve" x="13653" y="10299" fill="#00b000"  font-family="AvantGarde" font-style="normal" font-weight="normal" font-size="227" text-anchor="end">YES</text>
+<text xml:space="preserve" x="13005" y="9810" fill="#00b000" font-family="AvantGarde" font-style="normal" font-weight="normal" font-size="216" text-anchor="end">YES</text>
 <!-- Text -->
-<text xml:space="preserve" x="14881" y="10771" fill="#606c71"  font-family="AvantGarde" font-style="normal" font-weight="normal" font-size="227" text-anchor="middle">build job!</text>
+<text xml:space="preserve" x="14175" y="10260" fill="#606c71" font-family="AvantGarde" font-style="normal" font-weight="normal" font-size="216" text-anchor="middle">build job!</text>
 <!-- Text -->
-<text xml:space="preserve" x="11811" y="9401" fill="#606c71"  font-family="AvantGarde" font-style="normal" font-weight="normal" font-size="227" text-anchor="start">build()</text>
+<text xml:space="preserve" x="11250" y="8955" fill="#606c71" font-family="AvantGarde" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">build()</text>
 <!-- Text -->
-<text xml:space="preserve" x="11811" y="10629" fill="#606c71"  font-family="AvantGarde" font-style="normal" font-weight="normal" font-size="227" text-anchor="start">job instance</text>
+<text xml:space="preserve" x="11250" y="10125" fill="#606c71" font-family="AvantGarde" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">job instance</text>
 <!-- Text -->
-<text xml:space="preserve" x="11811" y="11574" fill="#606c71"  font-family="AvantGarde" font-style="normal" font-weight="normal" font-size="227" text-anchor="start">job instance</text>
+<text xml:space="preserve" x="11250" y="11025" fill="#606c71" font-family="AvantGarde" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">job instance</text>
 </g>
 </svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2.6a -->
+<!-- CreationDate: 2020-07-12 19:15:52 -->
+<!-- Magnification: 1.05 -->
+<svg	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="348pt" height="25pt"
+	viewBox="3214 588 5509 389">
+<g fill="none">
+<!-- Line -->
+<polygon points=" 4995,740 7425,695 7425,605 7650,785 7425,965 7425,875 4995,830" fill="#606c71"
+	stroke="#606c71" stroke-width="8px"/>
+<!-- Text -->
+<text xml:space="preserve" x="4860" y="855" fill="#606c71" font-family="Helvetica" font-style="normal" font-weight="bold" font-size="240" text-anchor="end">input data</text>
+<!-- Text -->
+<text xml:space="preserve" x="7785" y="855" fill="#606c71" font-family="Helvetica" font-style="normal" font-weight="bold" font-size="240" text-anchor="start">result</text>
+</g>
+</svg>

@@ -1,161 +1,133 @@
 <?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Creator: fig2dev Version 3.2 Patchlevel 5e -->
-<!-- CreationDate: Mon Jun 24 21:33:22 2019 -->
-<!-- Magnification: 1.050 -->
+<!-- Creator: fig2dev Version 3.2.6a -->
+<!-- CreationDate: 2020-07-12 19:15:52 -->
+<!-- Magnification: 1.05 -->
 <svg	xmlns="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
-	width="6.7in" height="3.3in"
-	viewBox="-1574 12213 8089 4007">
-<g style="stroke-width:.025in; fill:none">
+	width="486pt" height="241pt"
+	viewBox="-1500 11633 7705 3817">
+<g fill="none">
 <!-- Line -->
-<polyline points="2456,12236
-2456,14031
-" style="stroke:#606c71;stroke-width:8;
-stroke-linejoin:miter; stroke-linecap:butt;
-stroke-dasharray:10 31;"/>
-<!-- Line: box -->
-<rect x="1322" y="12236" width="2267" height="1795" rx="0" 
-style="stroke:#606c71;stroke-width:16;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
-<!-- Line: box -->
-<rect x="1322" y="14834" width="2267" height="1133" rx="0" 
-style="stroke:#606c71;stroke-width:16;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
+<polyline points=" 2340,11655 2340,13365"
+	stroke="#606c71" stroke-width="8px" stroke-dasharray="10 30"/>
 <!-- Line -->
-<polyline points="2456,14834
-2456,15968
-" style="stroke:#606c71;stroke-width:8;
-stroke-linejoin:miter; stroke-linecap:butt;
-stroke-dasharray:10 31;"/>
-<!-- Line: box -->
-<rect x="4157" y="14834" width="2267" height="1133" rx="0" 
-style="stroke:#606c71;stroke-width:16;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
+<rect x="1260" y="11655" width="2160" height="1710"
+	stroke="#606c71" stroke-width="15px"/>
 <!-- Line -->
-<polyline points="5291,14834
-5291,15968
-" style="stroke:#606c71;stroke-width:8;
-stroke-linejoin:miter; stroke-linecap:butt;
-stroke-dasharray:10 31;"/>
+<rect x="1260" y="14130" width="2160" height="1080"
+	stroke="#606c71" stroke-width="15px"/>
 <!-- Line -->
-<polyline points="2456,14173
-2456,14503
-" style="stroke:#606c71;stroke-width:32;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
-<!-- Arrowhead on XXXpoint 2456 14173 - 2456 14740-->
-<polygon points="2409 14534
-2456 14723
-2503 14534
-2409 14534
-
-" style="stroke:#606c71;stroke-width:8;stroke-miterlimit:8;
-fill:#606c71;"/>
-<!-- Line: box -->
-<rect x="-1511" y="14834" width="2267" height="1133" rx="0" 
-style="stroke:#606c71;stroke-width:16;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
+<polyline points=" 2340,14130 2340,15210"
+	stroke="#606c71" stroke-width="8px" stroke-dasharray="10 30"/>
 <!-- Line -->
-<polyline points="3259,14173
-4639,14633
-" style="stroke:#606c71;stroke-width:32;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
-<!-- Arrowhead on XXXpoint 3259 14173 - 4862 14707-->
-<polygon points="4653 14686
-4847 14702
-4682 14597
-4653 14686
-
-" style="stroke:#606c71;stroke-width:8;stroke-miterlimit:8;
-fill:#606c71;"/>
+<rect x="3960" y="14130" width="2160" height="1080"
+	stroke="#606c71" stroke-width="15px"/>
 <!-- Line -->
-<polyline points="-377,14834
--377,15968
-" style="stroke:#606c71;stroke-width:8;
-stroke-linejoin:miter; stroke-linecap:butt;
-stroke-dasharray:10 31;"/>
+<polyline points=" 5040,14130 5040,15210"
+	stroke="#606c71" stroke-width="8px" stroke-dasharray="10 30"/>
 <!-- Line -->
-<polyline points="1653,14173
-272,14633
-" style="stroke:#606c71;stroke-width:32;
-stroke-linejoin:miter; stroke-linecap:butt;
-"/>
-<!-- Arrowhead on XXXpoint 1653 14173 - 49 14707-->
-<polygon points="228 14597
-65 14702
-258 14686
-228 14597
-
-" style="stroke:#606c71;stroke-width:8;stroke-miterlimit:8;
-fill:#606c71;"/>
+<defs>
+<clipPath id="cp0">
+	<path clip-rule="evenodd" d="M -1500,11633 H 6205 V 15450 H -1500 z
+		M 2385,13799 2295,13799 2322,14013 2358,14013z"/>
+</clipPath>
+</defs>
+<polyline points=" 2340,13500 2340,13995" clip-path="url(#cp0)"
+	stroke="#606c71" stroke-width="30px"/>
+<!-- Forward arrow to point 2340,13995 -->
+<polygon points=" 2295,13799 2340,13979 2385,13799 2295,13799"
+	stroke="#606c71" stroke-width="8px" stroke-miterlimit="8" fill="#606c71"/>
+<!-- Line -->
+<rect x="-1440" y="14130" width="2160" height="1080"
+	stroke="#606c71" stroke-width="15px"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp1">
+	<path clip-rule="evenodd" d="M -1500,11633 H 6205 V 15450 H -1500 z
+		M 4418,13890 4390,13976 4601,14018 4613,13984z"/>
+</clipPath>
+</defs>
+<polyline points=" 3105,13500 4590,13995" clip-path="url(#cp1)"
+	stroke="#606c71" stroke-width="30px"/>
+<!-- Forward arrow to point 4590,13995 -->
+<polygon points=" 4390,13976 4575,13990 4418,13890 4390,13976"
+	stroke="#606c71" stroke-width="8px" stroke-miterlimit="8" fill="#606c71"/>
+<!-- Line -->
+<polyline points=" -360,14130 -360,15210"
+	stroke="#606c71" stroke-width="8px" stroke-dasharray="10 30"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp2">
+	<path clip-rule="evenodd" d="M -1500,11633 H 6205 V 15450 H -1500 z
+		M 290,13976 262,13890 67,13984 79,14018z"/>
+</clipPath>
+</defs>
+<polyline points=" 1575,13500 90,13995" clip-path="url(#cp2)"
+	stroke="#606c71" stroke-width="30px"/>
+<!-- Forward arrow to point 90,13995 -->
+<polygon points=" 262,13890 105,13990 290,13976 262,13890"
+	stroke="#606c71" stroke-width="8px" stroke-miterlimit="8" fill="#606c71"/>
 <!-- Text -->
-<text xml:space="preserve" x="-1417" y="15118" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">user0</text>
+<text xml:space="preserve" x="-1350" y="14400" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">user0</text>
 <!-- Text -->
-<text xml:space="preserve" x="-236" y="15118" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">movie0</text>
+<text xml:space="preserve" x="-225" y="14400" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">movie0</text>
 <!-- Text -->
-<text xml:space="preserve" x="-1417" y="15322" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">user0</text>
+<text xml:space="preserve" x="-1350" y="14595" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">user0</text>
 <!-- Text -->
-<text xml:space="preserve" x="-236" y="15322" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">movie2</text>
+<text xml:space="preserve" x="-225" y="14595" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">movie2</text>
 <!-- Text -->
-<text xml:space="preserve" x="-1417" y="15511" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">user3</text>
+<text xml:space="preserve" x="-1350" y="14775" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">user3</text>
 <!-- Text -->
-<text xml:space="preserve" x="-236" y="15511" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">movie5</text>
+<text xml:space="preserve" x="-225" y="14775" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">movie5</text>
 <!-- Text -->
-<text xml:space="preserve" x="1417" y="12472" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">user0</text>
+<text xml:space="preserve" x="1350" y="11880" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">user0</text>
 <!-- Text -->
-<text xml:space="preserve" x="2598" y="12472" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">movie0</text>
+<text xml:space="preserve" x="2475" y="11880" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">movie0</text>
 <!-- Text -->
-<text xml:space="preserve" x="1417" y="12692" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">user2</text>
+<text xml:space="preserve" x="1350" y="12090" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">user2</text>
 <!-- Text -->
-<text xml:space="preserve" x="2598" y="12692" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">movie1</text>
+<text xml:space="preserve" x="2475" y="12090" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">movie1</text>
 <!-- Text -->
-<text xml:space="preserve" x="1417" y="12913" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">user0</text>
+<text xml:space="preserve" x="1350" y="12300" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">user0</text>
 <!-- Text -->
-<text xml:space="preserve" x="2598" y="12913" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">movie2</text>
+<text xml:space="preserve" x="2475" y="12300" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">movie2</text>
 <!-- Text -->
-<text xml:space="preserve" x="1417" y="13133" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">user16</text>
+<text xml:space="preserve" x="1350" y="12510" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">user16</text>
 <!-- Text -->
-<text xml:space="preserve" x="2598" y="13133" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">movie3</text>
+<text xml:space="preserve" x="2475" y="12510" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">movie3</text>
 <!-- Text -->
-<text xml:space="preserve" x="1417" y="13354" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">user7</text>
+<text xml:space="preserve" x="1350" y="12720" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">user7</text>
 <!-- Text -->
-<text xml:space="preserve" x="2598" y="13354" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">movie4</text>
+<text xml:space="preserve" x="2475" y="12720" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">movie4</text>
 <!-- Text -->
-<text xml:space="preserve" x="1417" y="13574" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">user3</text>
+<text xml:space="preserve" x="1350" y="12930" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">user3</text>
 <!-- Text -->
-<text xml:space="preserve" x="2598" y="13574" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">movie5</text>
+<text xml:space="preserve" x="2475" y="12930" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">movie5</text>
 <!-- Text -->
-<text xml:space="preserve" x="1417" y="13795" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">user5</text>
+<text xml:space="preserve" x="1350" y="13140" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">user5</text>
 <!-- Text -->
-<text xml:space="preserve" x="2598" y="13795" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">movie6</text>
+<text xml:space="preserve" x="2475" y="13140" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">movie6</text>
 <!-- Text -->
-<text xml:space="preserve" x="1417" y="15118" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">user16</text>
+<text xml:space="preserve" x="1350" y="14400" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">user16</text>
 <!-- Text -->
-<text xml:space="preserve" x="2598" y="15118" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">movie3</text>
+<text xml:space="preserve" x="2475" y="14400" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">movie3</text>
 <!-- Text -->
-<text xml:space="preserve" x="1417" y="15338" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">user7</text>
+<text xml:space="preserve" x="1350" y="14610" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">user7</text>
 <!-- Text -->
-<text xml:space="preserve" x="2598" y="15338" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">movie4</text>
+<text xml:space="preserve" x="2475" y="14610" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">movie4</text>
 <!-- Text -->
-<text xml:space="preserve" x="4251" y="15102" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">user2</text>
+<text xml:space="preserve" x="4050" y="14385" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">user2</text>
 <!-- Text -->
-<text xml:space="preserve" x="5433" y="15102" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">movie1</text>
+<text xml:space="preserve" x="5175" y="14385" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">movie1</text>
 <!-- Text -->
-<text xml:space="preserve" x="4251" y="15307" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">user5</text>
+<text xml:space="preserve" x="4050" y="14580" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">user5</text>
 <!-- Text -->
-<text xml:space="preserve" x="5433" y="15307" fill="#606c71"  font-family="Courier" font-style="normal" font-weight="bold" font-size="227" text-anchor="start">movie6</text>
+<text xml:space="preserve" x="5175" y="14580" fill="#606c71" font-family="Courier" font-style="normal" font-weight="bold" font-size="216" text-anchor="start">movie6</text>
 <!-- Text -->
-<text xml:space="preserve" x="-1559" y="16204" fill="#606c71"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="227" text-anchor="start">SLICE0</text>
+<text xml:space="preserve" x="-1485" y="15435" fill="#606c71" font-family="Helvetica" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">SLICE0</text>
 <!-- Text -->
-<text xml:space="preserve" x="1275" y="16204" fill="#606c71"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="227" text-anchor="start">SLICE1</text>
+<text xml:space="preserve" x="1215" y="15435" fill="#606c71" font-family="Helvetica" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">SLICE1</text>
 <!-- Text -->
-<text xml:space="preserve" x="4110" y="16204" fill="#606c71"  font-family="Helvetica" font-style="normal" font-weight="normal" font-size="227" text-anchor="start">SLICE2</text>
+<text xml:space="preserve" x="3915" y="15435" fill="#606c71" font-family="Helvetica" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">SLICE2</text>
 </g>
 </svg>
