@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Being Reproducible:<br>  From Input Data to Result and Back"
-date:   2020-06-01 00:00:00
+date:   2020-07-01 00:00:00
 categories: example
 ---
 
@@ -154,7 +154,7 @@ potential problems here, for example (tick the ones you recognize):
   re-execution, and in that case there is no previous output left for
   us to compare our latest results to.  Maybe we did a copy/paste of
   some important numbers to a text file or spread sheet.  But which
-  version of the code did it now match again?
+  version of the code did it match again?
 
 - Are we sure the result is based on the current version of the data
   and code?  If not - run everything again just to be sure (*sigh*)!
@@ -239,7 +239,7 @@ linked to the _result directory_.
 
 By looking at a link in the _result directory_, one can directly see
 which file inside a job directory that it points to.  Inside this job
-directory is the source code stored that was used to generate the
+directory is the source code that was used to generate the
 file, along with references to input data and other jobs that were
 used to process the data.  *Following all links backwards will unwind
 the complete processing graph, independent of how complex it is, all
@@ -288,11 +288,11 @@ containing references to the job.  This job object looks exactly the
 same as the one returned the first time, when the job was actually
 built.
 
-The Accelerator finds pre-build jobs in an instant, because each job
+The Accelerator finds pre-built jobs in an instant, because each job
 stores a hash digest of the job's source code.  The hash digest
 together with input parameters is a unique identifier of a job.
 
-If a build script is fetching pre-build jobs instead of building new
+If a build script is fetching pre-built jobs instead of building new
 ones, it actually validates all processing from input to output.  A
 re-build, on the other hand, is a sign saying that something has been
 modified since last run.  Storing and looking up jobs saves time while
