@@ -19,6 +19,9 @@ ax init
 # check/modify the "accelerator.conf" file according to your needs
 ax server &
 ax run tests
+# inspect the results in a browser:
+ax board
+# point browser to http://localhost:8520
 ```
 
 
@@ -230,6 +233,22 @@ this and make sure all character encoding tests are run successfully.
 
 
 
+# Inspect Results in a Browser, the Accelerator Board
+
+Start the *board* server
+
+```
+ax board
+```
+
+and point a browser to [http://localhost:8520](http://localhost:8520).
+The board server will visualise everything connected to the results
+linked in the result directory in the browser.  All jobs, datasets,
+source code, parameters, and input data is visualised using the board
+server, making all processing completely transparent.
+
+
+
 # Running Arbitrary programs:  The dev package
 
 New project code is put in the `dev/` directory.  The `init` command
@@ -284,5 +303,5 @@ cd accelerator
 
 On a clean Debian-based system, install dependencies using
 ```shell
-apt-get install python3-ujson python3-cffi 
+apt-get install python3-cffi
 ```
