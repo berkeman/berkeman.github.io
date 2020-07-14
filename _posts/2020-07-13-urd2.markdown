@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Urd Example - Part 2:  Let Urd keep track of your Datasets"
+title:  "Urd Example - Part 2:  Let Urd Keep Track of Datasets"
 date:   2020-07-13 00:00:00
 categories: example
 ---
