@@ -1,0 +1,213 @@
+---
+layout: post
+title:  "Urd Example - Part 3:  Appending New Columns to an Existing Dataset Chain"
+date:   2020-07-13 00:00:00
+categories: example
+---
+
+Urd is the Norse godess of the past.  It is also the name of the
+Accelerator's database that keeps track of built jobs and their
+dependencies.
+
+In this post, we show how to use Urd to append a new column to a
+dataset chain.
+
+This is the third and last part of a series of three posts.  The other
+posts are [post 1](https://exax.org/example/2020/07/13/urd1.html) and
+[post 2](https://exax.org/example/2020/07/13/urd2.html).
+
+
+
+## Two Build Scripts
+
+Again, we are working on these input files with timestamp
+
+```
+files = (
+        ('2009-01', 'yellow_tripdata_2009-01.csv'),
+        ('2009-02', 'yellow_tripdata_2009-02.csv'),
+        ('2009-03', 'yellow_tripdata_2009-03.csv'),
+)
+```
+
+
+
+Below are two build scripts.
+
+  - The first build script will import a list of files into a dataset
+  chain and store the jobs in a list in Urd.
+
+  - The second build script will run a method that appends a column to
+  the full chain of import jobs, one job at a time, creating a new
+  chained dataset with an additional column.
+
+
+The first build script, doing the importing, was presented in the
+previous *@@@post*.  Nothing new here.
+
+```python
+def main(urd):
+        last_created = urd.peek_latest('import').timestamp
+        for ts, filename in files:
+                if ts > last_created:
+                        urd.begin('import', ts)
+                        previous = urd.latest('import').joblist.get(-1)
+                        urd.build('csvimport', filename=filename, previous=previous)
+                        urd.finish('import')
+```
+
+The second build script will make sure that the method `append` will
+be run on all jobs created by the first build script.  Furthermore,
+all `append`-jobs will be chained in the same way as the `csvimport`
+jobs.
+
+```python
+1: def main(urd)
+2:         last_appended = urd.peek_latest('append').timestamp
+3:         for ts in urd.since('import', last_appended):
+4:                 urd.begin('append', ts)
+5:                 parent = urd.get('import', ts).joblist.get('csvimport')
+6:                 previous = urd.latest('append').joblist.get(-1)
+7:                 urd.build('append', data='this is the time: %s' % (ts,), parent=parent, previous=previous)
+8:                 urd.finish('append')
+```
+
+Detailed explanation:
+
+  - Line 2.  Like in the previous import example, we find the
+    timestamp of the latest (i.e. newest) append job that we've done
+    so far.
+
+  - Line 3.  Loop over all timestamps in the `import` list that are
+  *newer* than the latest append job.  We have *not* created append
+  jobs for these yet.
+
+  - Line 4 and 8 defines the `append` urd session for the timestamps
+    from the for-loop.
+
+  - In line 5, we find the `csvimport` job from the `import` Urd-list
+    with the same timestamp as the ongoing Urd session.  We will
+    append a column to this job's dataset.
+
+  - In line 6, we find the previous `append` job by fetching the Urd
+    session with the current timestamp and selecting the last job in
+    the joblist.  (There is only one.)
+
+  - Finally, line 7 builds the chained `append` job, that takes the
+    `csvimport` job as *parent*.  All columns in the `csvimport` job
+    will now also be exposed in the `append` job, together with any
+    new columns created by `append`.
+
+Note that *both* the parent (found by `urd.get()`) and the previous
+(found by `urd.latest()`) sessions will be added as dependencies to
+the running `append` session.
+
+
+
+## Inspection
+
+Now we have two Urd lists
+
+```
+% ax curl list
+[
+    "<user>/import",
+    "<user>/append",
+]
+```
+
+And here are all sessions stored in them
+
+```
+% ax curl <user>/import/since/0
+[
+    "2009-01",
+    "2009-02",
+    "2009-03"
+]
+% ax curl <user>/append/since/0
+[
+    "2009-01",
+    "2009-02",
+    "2009-03"
+]
+```
+
+Looking at the latest job in the `append` list (slightly compacted)
+
+```
+% ax curl <user>/append/latest
+{
+    "timestamp": "2009-03",
+    "user": "<user>",
+    "build": "append",
+    "joblist": [ ["append", "dev-5"] ],
+    "deps": {
+        "<user>/append": {
+            "caption": "",
+            "joblist": [ ["append", "dev-4"] ],
+            "timestamp": "2009-02"
+        },
+        "<user>/import": {
+            "caption": "",
+            "joblist": [ ["csvimport", "dev-2"] ],
+            "timestamp": "2009-03"
+        }
+    },
+    "caption": ""
+}
+```
+
+Also, have a look at the latest `append` dataset
+
+```
+% ax dsinfo <job>
+```
+
+
+
+## Some Notes
+
+### When New Files are Added, Everything Just Works!
+
+Running the `import` build script with new files added will, for each
+new file, import the file, chain the dataset to the existing
+chain, and add a new session to Urd with the new timestamp.
+
+Running the `append` build script will in a similar fashion append a
+new column to all datasets in the `import` chain that does not already
+have the new column.
+
+In a more advanced setup, a `cron` job could be set up that regularly
+in an *incremental* fashion will import and process files and data
+that are new since the last run.
+
+
+
+### Do more than one job in a list - +dataset_type
+
+A typical import build script will do more that just `csvimport`.  It
+will also type the imported dataset using `dataset_type`, and perhaps
+apply sorting and/or hash partitioning using `dataset_sort` and
+`dataset_hashpart`.  In addition, custom methods may be applied to do
+some special operations on the imported data.  In the end, an import
+Urd session will be composed of several jobs, of which the last one is
+the one that will contain the dataset used for further processing.
+
+
+
+### Separation into Build Scripts and Workdirs
+
+Separation is a good thing.  It makes sense to have separate build
+scripts for various tasks, such as the tasks of importing and
+processing.  It also makes sense to let the different build scripts
+store jobs in different workdirs.  The import workdir will be written
+once by the import build script, and it will then be used many times.
+Other workdirs may contain more exploratory jobs, and may be erased
+from time to time.  Using separate workdirs ensure that each part of
+the processing occupies its own space in the storage system, making it
+possible to, say, erase out of date data analysis jobs without
+affecting the import jobs.
+
+
+
