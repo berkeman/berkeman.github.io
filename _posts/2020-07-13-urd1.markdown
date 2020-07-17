@@ -15,8 +15,8 @@ processing.
 
 This is the first part of a series of three posts intended to show how
 to design build scripts for automated importing of files.  The other
-posts are [post 2](https://exax.org/example/2020/07/13/urd2.html) and
-[post 3](https://exax.org/example/2020/07/13/urd3.html).  In this
+posts are [Part 2: Let Urd Keep Track of Datasets](/example/2020/07/13/urd2.html) and
+[Part 3: Appending New Columns to an Existing Dataset Chain](/example/2020/07/13/urd3.html).  In this
 part, the build script is very basic and it does not make use of any
 of Urd's advanced features.  Using Urd for keeping track of things is
 the topic of the other posts in this series.

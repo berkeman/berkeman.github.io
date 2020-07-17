@@ -21,8 +21,8 @@ available for reproducibility.  Data is never lost or overwritten
 using the Accelerator.
 
 This is the second part of a series of three posts.  The other posts
-are [post 1](https://exax.org/example/2020/07/13/urd1.html) and
-[post 3](https://exax.org/example/2020/07/13/urd3.html).
+are [Part 1: Plain Import of a List of Files](/example/2020/07/13/urd1.html) and
+[Part 3: Appending New Columns to an Existing Dataset Chain](/example/2020/07/13/urd3.html).
 
 
 
@@ -61,7 +61,7 @@ files = (
 )
 ```
 
-The difference from the [last post](https://exax.org/example/2020/07/13/urd1.html)
+The difference from the [previous post](/example/2020/07/13/urd1.html)
 is that here, each file has a _timestamp_.  Urd will associate each
 timestamp with a session of jobs used for that particular import.
 Thus, we can ask Urd to return a session containing the state of any
