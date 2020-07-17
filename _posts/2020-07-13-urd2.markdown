@@ -78,10 +78,10 @@ def main(urd):
     last_import = urd.peek_latest(key).timestamp
     for ts, filename in files:
         if ts > last_import:
-                urd.begin(key, ts)
-                previous = urd.latest(key).joblist.get(-1)
-                urd.build('csvimport', filename=filename, previous=previous)
-                urd.finish(key)
+            urd.begin(key, ts)
+            previous = urd.latest(key).joblist.get(-1)
+            urd.build('csvimport', filename=filename, previous=previous)
+            urd.finish(key)
 {% endhighlight %}
 
 Detailed explanation:
