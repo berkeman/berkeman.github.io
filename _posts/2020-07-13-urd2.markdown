@@ -280,7 +280,7 @@ dataset chain we used as input.  The Urd session:
             "dev-3"
         ]
     ],
-    "caption": ""
+    "caption": "",
     "deps": {
         "<user>/import": {
             "caption": "",
@@ -292,7 +292,7 @@ dataset chain we used as input.  The Urd session:
             ],
             "timestamp": "2009-03"
         }
-    },
+    }
 }
 ```
 
