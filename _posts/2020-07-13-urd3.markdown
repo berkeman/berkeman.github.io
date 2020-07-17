@@ -5,7 +5,7 @@ date:   2020-07-13 00:00:00
 categories: example
 ---
 
-Urd is the Norse godess of the past.  It is also the name of the
+Urd is the Norse goddess of the past.  It is also the name of the
 Accelerator's database that keeps track of built jobs and their
 dependencies.
 
@@ -22,7 +22,7 @@ posts are [Part 1: Plain Import of a List of Files ](/example/2020/07/13/urd1.ht
 
 Again, we are working on these input files with timestamp
 
-```
+```python
 files = (
     ('2009-01', 'yellow_tripdata_2009-01.csv'),
     ('2009-02', 'yellow_tripdata_2009-02.csv'),

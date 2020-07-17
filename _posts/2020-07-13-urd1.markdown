@@ -5,7 +5,7 @@ date:   2020-07-13 00:00:00
 categories: example
 ---
 
-Urd is the Norse godess of the past.  It is also the name of the
+Urd is the Norse goddess of the past.  It is also the name of the
 Accelerator's database that keeps track of built jobs and their
 dependencies.
 
@@ -32,7 +32,7 @@ files is fixed, sometimes more files will be added to the project
 later.  The Accelerator is built to handle all these different cases
 while providing transparency and reproducibility.
 
-This post looks at the basic case how to import a sequence of files in
+This post looks at the basic case &ndash; how to import a sequence of files in
 a given order, and create a dataset _chain_ which makes the data from
 all files available using the same simple interface.
 
@@ -42,7 +42,7 @@ all files available using the same simple interface.
 
 Assume that all files in a list like the one below is to be imported.
 
-```
+```python
 files = (
     'yellow_tripdata_2009-01.csv',
     'yellow_tripdata_2009-02.csv',
@@ -86,18 +86,8 @@ chained as well.
 
 # Running the Build Script.
 
-The name of the build script has to be `build.py` or
-`build_<something>.py`, where `<something>` is a string that is used
-to separate different build scripts residing in the same method
-directory.
-
-If the name of the build script is, for example,
-`build_importchain.py`, it is  run like this
-
-```bash
-% ax run importchain
-```
-
+Build scripts are named `build.py` or
+`build_<something>.py`.  Run them with `ax run` or `ax run <something>`.
 Add option `--fullpath` to print the full path names of all job directories.
 
 Below is a typical build script output
@@ -124,7 +114,7 @@ datasets: `dsinfo` and `dsgrep`.
 
 `dsinfo` is used to get information about a dataset or dataset chain.
 
-To investigate the contents of job `dev-2`, do like this
+To investigate the default dataset (and its chain `-c`)  of job `dev-2`, run
 
 ```
 % ax dsinfo dev-2 -c
@@ -167,13 +157,13 @@ dev-2/default
 
 Here, it shows that the full name of the dataset is `dev-2/default`,
 and that it is chained (linked) to `dev-1` using the `previous`
-attribute.  The bottom lines show that there are three dataset in the
-chain, together with the number of lines in each dataset.  (Observe
+attribute.  The bottom lines show that there are three datasets in the
+chain, together with the number of lines in each dataset.  (Note
 that all columns are untyped, i.e. are of type `bytes`.  Ideally, the
 dataset should be typed using the `dataset_type` method.  More about
 this in an upcoming post.)
 
-Try `ax dsinfo --help` option for more options.
+Try `ax dsinfo --help` for more options.
 
 
 
@@ -186,11 +176,11 @@ and show data in a dataset.
 % ax dsgrep <regexp> <dataset> <columns>
 ```
 
-The `<columns>` option is optional, and `<regexp>` is a traditional
-`grep` regular expression.
+The `<columns>` option is optional, and `<regexp>` is an extended `grep`
+regular expression.
 
 The `dsgrep` command can be used to print _all_ data in a dataset.
-This is done using the all-matching regular expression "`.`".
+This is done using the regular expression "`.`" that matches any character.
 
 ```bash
 % ax dsgrep . dev-2 | head
@@ -199,7 +189,8 @@ This is done using the all-matching regular expression "`.`".
 (The pipe to `head` is used to limit the number of output lines to
 ten.)
 
-It is also possible to limit output to one or a subset of all columns
+It is also possible to limit search to one or a subset of
+all columns
 
 ```
 % ax dsgrep . dev-2 tip_amount | head

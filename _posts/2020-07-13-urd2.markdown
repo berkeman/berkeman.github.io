@@ -5,7 +5,7 @@ date:   2020-07-13 00:00:00
 categories: example
 ---
 
-Urd is the Norse godess of the past.  It is also the name of the
+Urd is the Norse goddess of the past.  It is also the name of the
 Accelerator's database that keeps track of built jobs and their
 dependencies.
 
@@ -38,13 +38,13 @@ sessions.
  - An Urd *list* is a list of sessions that are stored in increasing
    timestamp order and shares a commmon name (or "key").
 
-Any session could be looked up if we know the timestamp and the name
+Any session can be looked up if we know the timestamp and the name
 of the list.  For example, when importing a list of files, each import
-is stored in its own session using an unique timestamp, and all
+is stored in its own session using a unique timestamp, and all
 sessions are located in one list, for example named `import`.
 
 It should be noted that Urd timetamps can be either an integer, a
-timestamp with resolution ranging from years up to micro seconds, or a
+timestamp with resolution ranging from months up to micro seconds, or a
 tuple containing both.  This makes indexing of sessions very flexible.
 
 
@@ -53,7 +53,7 @@ tuple containing both.  This makes indexing of sessions very flexible.
 
 We want to import these files in date order and create a dataset chain.
 
-```
+```python
 files = (
     ('2009-01', 'yellow_tripdata_2009-01.csv'),
     ('2009-02', 'yellow_tripdata_2009-02.csv'),
@@ -125,10 +125,11 @@ method name, or an index.  Index `-1` corresponds to the last index in
 the list.  If this does not exist (i.e. the `joblist` is empty),
 `get` will return `None`.
 
-Why `-1` then?  It is because it is common that sessions contain
-several jobs, doing various processing of the imported data, and the
-dataset in the last job is typically what we want to continue working
-on.
+Note that the files are required to appear in increasing timestamp
+order.  If they are not, we need to make a desicion on how to handle
+the situation.  This is out of scope of this post.
+
+
 
 # Running the build script
 
@@ -301,7 +302,7 @@ well as its dependencies.  In this case, the dependency is the
 `import` Urd list at timestamp `2009-03`, holding the `csvimport` job
 `dev-2`.
 
-Using the Accelerator, everything compute step is traceable all the
+Using the Accelerator, every compute step is traceable all the
 way back to its source code and input data!
 
 In the [next part](/example/2020/07/13/urd3.html), we'll show how to
