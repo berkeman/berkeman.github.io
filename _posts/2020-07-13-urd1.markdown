@@ -209,5 +209,5 @@ that will print ten lines from the `tip_amount` column.
 
 Again, use the `--help` option to get a list of all options.
 
-*In the next post, we will show how to use Urd to keep track of
+*In the [next post](/example/2020/07/13/urd2.html), we will show how to use Urd to keep track of
 imported files and jobs in general.*
