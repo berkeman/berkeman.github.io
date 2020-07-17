@@ -24,9 +24,9 @@ Again, we are working on these input files with timestamp
 
 ```
 files = (
-        ('2009-01', 'yellow_tripdata_2009-01.csv'),
-        ('2009-02', 'yellow_tripdata_2009-02.csv'),
-        ('2009-03', 'yellow_tripdata_2009-03.csv'),
+    ('2009-01', 'yellow_tripdata_2009-01.csv'),
+    ('2009-02', 'yellow_tripdata_2009-02.csv'),
+    ('2009-03', 'yellow_tripdata_2009-03.csv'),
 )
 ```
 
@@ -47,13 +47,13 @@ previous *@@@post*.  Nothing new here.
 
 ```python
 def main(urd):
-        last_created = urd.peek_latest('import').timestamp
-        for ts, filename in files:
-                if ts > last_created:
-                        urd.begin('import', ts)
-                        previous = urd.latest('import').joblist.get(-1)
-                        urd.build('csvimport', filename=filename, previous=previous)
-                        urd.finish('import')
+    last_created = urd.peek_latest('import').timestamp
+    for ts, filename in files:
+        if ts > last_created:
+            urd.begin('import', ts)
+            previous = urd.latest('import').joblist.get(-1)
+            urd.build('csvimport', filename=filename, previous=previous)
+            urd.finish('import')
 ```
 
 The second build script will make sure that the method `append` will

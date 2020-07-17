@@ -44,9 +44,9 @@ Assume that all files in a list like the one below is to be imported.
 
 ```
 files = (
-        'yellow_tripdata_2009-01.csv',
-        'yellow_tripdata_2009-02.csv',
-        'yellow_tripdata_2009-03.csv',
+    'yellow_tripdata_2009-01.csv',
+    'yellow_tripdata_2009-02.csv',
+    'yellow_tripdata_2009-03.csv',
 )
 ```
 
@@ -59,12 +59,12 @@ It is straightforward to import these files in a loop, like this
 
 ```python
 def main(urd):
-        previous = None
-        for filename in files:
-                importjob = urd.build('csvimport', filename=filename, previous=previous)
-                previous = importjob
+    previous = None
+    for filename in files:
+        importjob = urd.build('csvimport', filename=filename, previous=previous)
+        previous = importjob
 
-        # Now, "importjob" is a job object that can be used to access the whole chain of Datasets.
+    # Now, "importjob" is a job object that can be used to access the whole chain of Datasets.
 ```
 
 The `csvimport` method will be called once for each of the files in
