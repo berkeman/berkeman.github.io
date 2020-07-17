@@ -61,16 +61,16 @@ be run on all jobs created by the first build script.  Furthermore,
 all `append`-jobs will be chained in the same way as the `csvimport`
 jobs.
 
-```python
-1: def main(urd)
-2:         last_appended = urd.peek_latest('append').timestamp
-3:         for ts in urd.since('import', last_appended):
-4:                 urd.begin('append', ts)
-5:                 parent = urd.get('import', ts).joblist.get('csvimport')
-6:                 previous = urd.latest('append').joblist.get(-1)
-7:                 urd.build('append', data='this is the time: %s' % (ts,), parent=parent, previous=previous)
-8:                 urd.finish('append')
-```
+{% highlight python linenos %}
+def main(urd)
+    last_appended = urd.peek_latest('append').timestamp
+    for ts in urd.since('import', last_appended):
+        urd.begin('append', ts)
+        parent = urd.get('import', ts).joblist.get('csvimport')
+        previous = urd.latest('append').joblist.get(-1)
+        urd.build('append', data='this is the time: %s' % (ts,), parent=parent, previous=previous)
+        urd.finish('append')
+{% endhighlight %}
 
 Detailed explanation:
 

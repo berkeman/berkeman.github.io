@@ -72,17 +72,17 @@ Here is a complete build script that will import and chain the files
 in increasing time order, as well as storing sessions with references
 to all jobs together with their timestamp in Urd.
 
-```python
-1: def main(urd):
-2:         key = 'import'
-3:         last_import = urd.peek_latest(key).timestamp
-4:         for ts, filename in files:
-5:                 if ts > last_import:
-6:                         urd.begin(key, ts)
-7:                         previous = urd.latest(key).joblist.get(-1)
-8:                         urd.build('csvimport', filename=filename, previous=previous)
-9:                         urd.finish(key)
-```
+{% highlight python linenos %}
+def main(urd):
+    key = 'import'
+    last_import = urd.peek_latest(key).timestamp
+    for ts, filename in files:
+        if ts > last_import:
+                urd.begin(key, ts)
+                previous = urd.latest(key).joblist.get(-1)
+                urd.build('csvimport', filename=filename, previous=previous)
+                urd.finish(key)
+{% endhighlight %}
 
 Detailed explanation:
 
