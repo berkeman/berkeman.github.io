@@ -5,11 +5,11 @@ permalink: /about/
 ---
 
 The Expertmaker Accelerator is a well-proven data processing framework
-that provides fast data access, parallel execution, and automatic
-organization of source code, input data, and results. It can be used
-for daily data analysis tasks as well as operating as a live
-recommendation system in production with hundreds of thousands of
-large data files and many CPUs.
+providing fast data access, parallel execution, reproducibility, and
+transparency. It can be used for anything from small daily data
+analysis tasks to running as multi-CPU backend in live production
+recommender systems based on hundreds of thousands of large data
+files.
 
 The Accelerator was developed by the Swedish AI company Expertmaker.
 The first project using the Accelerator was run in 2012, and since

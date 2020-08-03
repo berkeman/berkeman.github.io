@@ -20,5 +20,5 @@ The Accelerator projects has been built, tested, and runs on:
 but is not limited to these systems or versions.
 
 The Accelerator works on _both_ Python2 and Python3.  Supported versions
-are 2.7, 3.5-3.8.
+are 2.7 and 3.5-3.8.
 
