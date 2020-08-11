@@ -10,7 +10,7 @@ Updated 2020-08-11
 
 The Accelerator is designed for fast and reproducible data processing.
 Typical application data is composed of text strings and numbers, but
-the Accelerator can work as efficiently with any kind of binary data,
+the Accelerator can work efficiently with any kind of binary data,
 such as images or sound files.  In this post we will have a look at
 batch processing of large quantities of images.  The focus will be on
 
