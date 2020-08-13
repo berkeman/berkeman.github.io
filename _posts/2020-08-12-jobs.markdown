@@ -1,21 +1,23 @@
 ---
 layout: post
-title:  "Using the job object"
+title:  "Let the Job Object do the Work!"
 date:   2020-08-12 00:00:00
 categories: processing
 ---
 
 Job objects are used to pass dependencies, data and files between jobs
 and build scripts.  Job objects are easy to use, and they bring a set
-of functions that makes common tasks straightforward to write.
+of functions that makes common tasks straightforward to write and
+comprehend.  This post gives an overview of the job object's
+possibilities.
 
 
 
-### Job objects are returned from build calls
+### Job Objects are Returned from Build Calls
 
 The first place we encounter job objects is in build scripts.  The
 Accelerator uses build scripts to execute jobs.  Jobs are stored on
-the hard drive on the machine, so that they can be re-used if the same
+disk, so that they can be used by other jobs and re-used if the same
 build call is run again.  Here is an example of a simple build script:
 
 ```python
@@ -28,22 +30,24 @@ the execution of the method `csvimport` with the option
 `filename='mydata.csv`.  When execution finishes, the call returns a
 **job object** representing the job.
 
-### Job objects represent either existing jobs *or* the currently running job
+### Job Objects Represent Either Existing Jobs *or* the Currently Running Job
 
-Job objects come in **two very similar flavours**.  There is one used
-to **reference existing jobs**, for example in build scripts, and one
-used inside running jobs, used to **represent the running job
-itself**.  The vast majority of functionality is available in both
-places, but functions that only makes sense in one of the places is
-unavailable in the other.
+To be specific, job objects come in **two very similar flavours**.
+There is one used to **reference existing jobs**, for example in build
+scripts, and one used inside running jobs, used to **represent the
+running job itself**.  The vast majority of functionality is available
+in both places, but functions that only makes sense in one of the
+places is unavailable in the other.  The difference is kind of obvious
+when working on a project, so it will not be mentioned again here.
+
 
 
 ---
 
-## 1. Job references
+## 1. Job References
 
 The most common use of the job object in a build script is to make the
-job available to new jobs, like in this example
+job available to new jobs, like in this example:
 
 ```python
     job_import = urd.build('csvimport', filename='mydata.csv')
@@ -55,19 +59,17 @@ since it is using `job_import` as an input parameter.
 
 
 
-
-
 ---
 
 ## 2. Datasets
 
-Datasets are created by and stored in jobs.
+There is a tight connection between jobs and datasets.  Datasets are
+created by, and stored in, jobs.
 
 
+### Are There any Datasets in the Job?
 
-### Are there any Datasets in the job?
-
-This will return a list of all datasets in the job
+This will return a list of all datasets in a job:
 
 ```python
     all_datasets = job.datasets
@@ -75,9 +77,9 @@ This will return a list of all datasets in the job
 
 
 
-### How do I get a reference to a named dataset in a job?
+### How do I get a Reference to a Named Dataset?
 
-To get a reference to a particular named dataset
+To get a reference to a particular named dataset, use the `job.dataset()` function:
 
 ```python
     ds = job.dataset(name)
@@ -87,9 +89,9 @@ An empty `name` corresponds to the default dataset, i.e. `name='default'`.
 
 
 
-### How do I create a Dataset in a Job?
+### How do I Create a Dataset in a Job?
 
-Using `job.datasetwriter()`, here's a sketch:
+Datasets are created using `job.datasetwriter()`, here's a sketch:
 
 ```python
 
@@ -113,8 +115,15 @@ other examples or posts for more information.
 
 ## 3. Files
 
+There are three ways for a job to store data: as datasets, files, or
+using the return value, where the return value is actually a special case
+of a file.
 
-### How to load and store data in pickle or JSON formats
+### How to Load and Store Data in Files
+
+The Accelerator has built in support for storing data in Python's
+pickle format or in JSON format.  Not because it is necessary, but
+because it simplifies and streamlines the coding experience.
 
 A running job can use `job.save()` to store data to a file in a job.
 The data will be serialised using Python's pickle format.  For
@@ -133,7 +142,7 @@ def synthesis(job):
 Note the last line - the data returned from synthesis is stored in the
 file `result.pickle`!
 
-Loading files from a job is similar, using `job.load()`, like this
+Loading data from a job is equally simple, using `job.load()`, like this:
 
 ```python
     data = job.load('anothername.pickle')
@@ -141,41 +150,42 @@ Loading files from a job is similar, using `job.load()`, like this
     data = job.load()  # to load "result.pickle"
 ```
 
-There are also JSON-equivalents called `job.json_save()` and
-`job.json_load()`.  The Accelerator typically uses JSON format
-internally for meta data files and pickle format for everything else.
-
-
-
-### Load a job's return value into a variable
-
-As shown previously, the data returned by the `return` statement in
-`synthesis()` is loaded like this
+A common example would be to run a job and then do something with its
+output.  Assume that the `analyse` job returns some data using the
+`return` statement, then we could do:
 
 ```python
-    data = job.load()
+    job_analyse = urd.build('analyse', source=job_import)
+    data = job_analyse.load()
+    # do something with data here...
 ```
 
-Using `return` and `job.load()` is an easy way to pass data between
-jobs and build scripts.
+*The power of using the pickle format is that it is possible to store
+and retreive complex datatypes between jobs and build scripts whithout
+having to consider formatting or parsing!*
+
+The JSON-equivalents called `job.json_save()` and `job.json_load()`.
+(The Accelerator typically uses JSON format internally for meta data
+files and pickle format for everything else.)
 
 
 
-### How can I find the files stored in a job?
+### How can I Find the Names of all Files Stored in a Job?
 
 ```python
     all_files = job.files()
 ```
 This will return a `set` of all files created by the job.
-WITH ABSOLUTE FILE NAMES
+@@@WITH ABSOLUTE FILE NAMES
 
 
 
-### How does the job know about what files that have been created?
+### So, How does the Job Know About what Files that have been Created?
 
-The function `job.save()` as well as its JSON counterpart will
-register its files automatically.  If files are generated by some
-other method, files can be registered manually, like this:
+The function `job.save()`, as well as its JSON counterpart, will
+register its files automatically to the running job.  If files are
+generated by some other method, files can be registered manually, like
+this:
 
 ```python
 def synthesis(job):
@@ -184,7 +194,7 @@ def synthesis(job):
     job.register_file(filename)
 ```
 
-or, use `job.open` instead of plain `open`.
+or, using the extended `job.open()` instead of plain `open()`:
 
 ```python
 def synthesis(job):
@@ -206,52 +216,23 @@ will return the full pathname to the file.
 
 
 
-
-
 ---
 
-## 4. File references
+## 4. Results
 
-Passing jobs as input to other jobs is, as we've seen, straightforward.
-But sometimes we only want to pass specific files from one job to
-another.  Using a straight filenames would potentially hide the source
-job and break transparency.  Instead, we pass information on the name
-of the file *together* with information on the job creating it, using
-the `job.withfile()` function, like this:
+### Making a File in a Job Visible in the Result Directory
 
-```python
-    job = urd.build('create_a_file')
-    urd.build('checkfile', thefile = job.withfile('somename')
-```
+The result directory is a place where "global" results and findings
+can be put.  Actually, files should not be stored there, because that
+would break the link between the file and the job that created the
+file ("Where does this file come from again?").  Instead, we use soft
+links, that *point* to files in jobs.  The difference between a file
+and a link is that the link shows the actual location of the original
+file (which is in the job that created it).  So the link maintains
+transparency.
 
-In the corresponding method (in this case `checkfile`), it looks
-something like this
-
-```python
-from accelerator import JobWithFile
-
-options = dict(thefile=JobWithFile())
-
-def synthesis():
-    print('filename is', options.thefile.resolve())
-```
-
-(In addition, the `JobWithFile` object has functions to get filename
-as well as jobname from the input parameter.)
-
-
-
----
-
-## 5. Results
-
-### Making a file in a job visible in the result directory
-
-The result directory is a place where "global" can be placed.  We do
-not store files there, because that would break the link to the job
-creating the file.  Instead, we store links to files in job.  The
-preferred way to do this is using the helper function
-`job.link_result`, like this
+The preferred and easiest way to create links in the result directory
+is to use the helper function `job.link_result()`, like this:
 
 ```python
     job = urd.build('plotsomething', source=mydataset)
@@ -270,11 +251,104 @@ The name of the link can be set using the `linkname` option:
 
 
 
+## 5. File references
+
+Passing jobs as input to other jobs is, as we've seen,
+straightforward.  But sometimes we only want to pass specific files
+from one job to another.  There are several ways to do this:
+
+ - We pass the job object representing an existing job with files to a
+   new job.  In this case, the new job then knows which job that
+   created and holds the files, but it does not know the name of the
+   files.
+
+   If there is only one file, and we use the convention to name the
+   file `result.pickle`, there is no problem.  But if there are more
+   than one file, or the file name is not always unique, the new job
+   does not know how to resolve the situation.  One solution is to
+   hard code the file names in the new job's source code.  *This is ok
+   in many cases, but it is not a generic solution.*
+
+ - We pass the full pathname of the file to the new job as a
+   parameter.  In this case, the file could be read directly by the
+   new job, but the information about which job that generated the
+   file is gone.  *This breaks transparency and should be avoided.*
+
+A third alternative is to pass the file name *together* with a
+reference to the job that created it.  This is done using the
+`job.withfile()` function, like this:
+
+```python
+    job = urd.build('create_a_file')
+    urd.build('checkfile', thefile = job.withfile('somename')
+```
+
+Here, the `checkfile` job is working on the file named `somename`,
+that was generated by the `create_a_file` job.
+
+In the corresponding method (in this case `checkfile`), it looks
+something like this
+
+```python
+from accelerator import JobWithFile
+
+options = dict(thefile=JobWithFile())
+
+def synthesis():
+    print('filename is', options.thefile.resolve())
+```
+
+In addition, the `JobWithFile` object has functions to get filename as
+well as jobname from the input parameter, and it also handles
+**parallel file sets** for passing data between parallel processing
+jobs, see manual for more information.
+
+
+
 ---
 
+## 6. Miscellaneous Functions, Available for Existing Jobs
+
+These functions are available on existing jobs to investigate a job's
+output, input parameters, and execution times (covering both parallel
+and serial parts of the program in detail).
+
+```python
+   job.output()  # A string containing everything the job has written to stdout and stderr!
+
+   job.params    # A dict containing all the job's parameters
+
+   job.post      # Execution times for all parts of the job
+```
 
 
-## 6. Miscellaneous, common for both existing and running job
+
+---
+
+## 7.  Miscellaneous Functions, Available for Running Jobs
+
+Information on location of input and result directory is available to
+the running job object:
+
+```python
+    job.input_directory
+```
+
+The reference to the `input_directory` is useful when writing data
+import methods.  Storing data in the `input_directory`, specified by
+the Accelerator's configuration file, makes it possible to import data
+without absolute file path dependencies.  This makes it much easier to
+port a project to a different system.
+
+@@@ ta bort result_directory i CurrentJob
+
+
+
+---
+
+## 8. Miscellaneous Functions, Common for both Existing and Running Jobs
+
+These are only mentioned for completeness:
 
 ```python
     job.method   # name of the job's method (i.e. corresponding source filename)
@@ -287,30 +361,6 @@ The name of the link can be set using the `linkname` option:
 ```
 
 
-## 7. Miscellaneous, existing jobs
-
-For existing jobs, there are these pieces of additional information
-available through the job object as well:
-
-```python
-   job.output()  # A string containing everything the job has written to stdout and stderr!
-
-   job.params    # A dict containing all the job's parameters
-
-   job.post      # Execution times for all parts of the job
-```
-
-
-## 8.  Miscellaneous, current job
-
-Information on location of input and result directory is available to
-the running job object:
-
-```python
-    job.input_directory
-
-    job.result_directory
-```
 
 
 
@@ -318,8 +368,9 @@ the running job object:
 
 ## 9. Job Chains
 
-Similar to dataset chains, it is possible to create chains of jobs.
-This is done using the `jobs.previous` input parameter.  In a method:
+Similar to dataset chains, it is possible to create chains of jobs.  A
+job chain is created using the `jobs.previous` input parameter.  In a
+method:
 
 ```python
 jobs = ('previous',)
@@ -345,3 +396,15 @@ This creates a job chain that is ten jobs long.  The
 
 Similar to dataset chains, this function takes some options, see
 documentation for details.
+
+
+
+---
+
+## 10. Conclusion
+
+The intention of this post is to show the various functions and most
+common use cases for the job object.  The job object provides
+streamlined solutions to common situations that reduce the amount of
+code to write (and maintain).  For more details and practical
+examples, see the references below.
