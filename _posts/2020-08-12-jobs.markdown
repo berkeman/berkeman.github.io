@@ -413,7 +413,25 @@ documentation for details.
 
 ---
 
-## 8. Conclusion
+## 8. Relation to Other Classes
+
+The graph below shows as simplified version of how the different
+classes used by the Accelerator are connected.
+
+<p align="center"><img src="{{ site.url }}/assets/classes.svg"> </p>
+
+Note that
+
+- only a small subset of all available class member functions are
+shown in order to keep the image simple, and
+
+- the graph does only show the most relevant classes.
+
+
+
+---
+
+## 9. Conclusion
 
 The intention of this post is to show the various functions and most
 common use cases for the job object.  The job object provides
