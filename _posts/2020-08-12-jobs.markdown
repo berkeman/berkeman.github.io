@@ -416,7 +416,8 @@ documentation for details.
 ## 8. Relation to Other Classes
 
 The graph below shows as simplified version of how the different
-classes used by the Accelerator are connected.
+classes used by the Accelerator are connected.  The classes at the top
+are used in build scripts, and classes at the bottom in running jobs.
 
 <p align="center"><img src="{{ site.url }}/assets/classes.svg"> </p>
 
