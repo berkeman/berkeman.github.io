@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The Job Object: The Key to Data and Results"
+title:  "Job Objects: The Keys to Data and Results"
 date:   2020-08-15 00:00:00
 categories: processing
 ---
