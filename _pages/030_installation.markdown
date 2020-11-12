@@ -13,12 +13,12 @@ See this [blog post](https://exax.org/documentation/2019/10/30/initialise.html) 
 
 The Accelerator projects has been built, tested, and runs on:
 
- - Ubuntu 16.04, 18.04
+ - Ubuntu 16.04, 18.04, 20.04
  - Debian 9, 10
  - FreeBSD 11.3, 12.1
 
 but is not limited to these systems or versions.
 
 The Accelerator works on _both_ Python2 and Python3.  Supported versions
-are 2.7 and 3.5-3.8.
+are 2.7 and 3.5-3.9.
 
