@@ -3,6 +3,7 @@ layout: post
 title:  "Accelerator Installation"
 date:   2019-10-30 00:00:00
 categories: documentation
+author: Anders Berkeman, Carl Drougge, and Sofia Hörberg
 ---
 [Updated 2020-02-25]<br>
 [Updated 2020-07-13]

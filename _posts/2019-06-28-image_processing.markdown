@@ -3,6 +3,7 @@ layout: post
 title:  "Parallel Image Processing using the Accelerator:  The Basics"
 date:   2019-06-28 00:00:00
 categories: processing
+author: Anders Berkeman, Carl Drougge, and Sofia Hörberg
 ---
 
 Updated 2020-08-11

@@ -3,6 +3,7 @@ layout: post
 title:  "Job Objects: The Keys to Data and Results"
 date:   2020-08-15 00:00:00
 categories: processing
+author: Anders Berkeman, Carl Drougge, and Sofia Hörberg
 ---
 
 

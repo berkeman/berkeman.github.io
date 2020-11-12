@@ -3,6 +3,7 @@ layout: post
 title:  "Being Reproducible:<br>  From Input Data to Result and Back"
 date:   2020-07-01 00:00:00
 categories: example
+author: Anders Berkeman, Carl Drougge, and Sofia Hörberg
 ---
 
 # TL;DR

@@ -3,6 +3,7 @@ layout: post
 title:  "Processing a Billion Row Dataset on an Inexpensive Workstation"
 date:   2019-09-02 00:00:00
 categories: performance
+author: Anders Berkeman, Carl Drougge, and Sofia Hörberg
 ---
 
 It is interesting to consider the problem of processing large datasets

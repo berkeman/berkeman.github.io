@@ -3,6 +3,7 @@ layout: post
 title:  "Fast Parsing of the Kaggle CORD-19 Dataset"
 date:   2020-04-13 00:00:00
 categories: example
+author: Anders Berkeman, Carl Drougge, and Sofia Hörberg
 ---
 
 # The Question

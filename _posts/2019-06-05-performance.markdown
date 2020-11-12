@@ -3,6 +3,7 @@ layout: post
 title:  "The Accelerator and Maximising Performance on Modern Computers"
 date:   2019-06-05 00:00:00
 categories: performance
+author: Anders Berkeman, Carl Drougge, and Sofia Hörberg
 ---
 
 The Accelerator is able to process hundreds of millions of data rows
