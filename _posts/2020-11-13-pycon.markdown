@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "PyCon Talk: Video of Corona Lockdown using Exax"
+date:   2020-11-13 00:00:00
+categories: talk
+author: Anders Berkeman, Carl Drougge, and Sofia Hörberg
+---
+
+
+## PyCon SE 2020
+
+An animation is a superior way to visualise large datasets with many
+dimensions and relations.  In this talk at PyCon SE 2020, we use the
+large NYC yellow cab open dataset to visualise how the COVID-19
+lockdown affected the taxi traffic by comparing 2019 to 2020.
+
+Link to the [animation](https://www.youtube.com/watch?v=ym34vsnc68w).  
+Link to the [PyCon talk](https://www.youtube.com/watch?v=wAMxtuI0Vbc).  
+Link to the corresponding [source code at github](https://github.com/exaxorg/pycon20-nyc-taxi-covid-movie).
