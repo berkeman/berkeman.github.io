@@ -22,3 +22,9 @@ but is not limited to these systems or versions.
 The Accelerator works on _both_ Python2 and Python3.  Supported versions
 are 2.7 and 3.5-3.9.
 
+
+## Hardware
+
+The Accelerator runs on a single machine.  Typically, it is run on a
+laptop, but anything from a Raspberry Pie to a high performance rack
+server works.  More RAM, disk, and CPU cores are better.
