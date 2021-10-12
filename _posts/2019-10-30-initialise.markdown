@@ -5,8 +5,7 @@ date:   2019-10-30 00:00:00
 categories: documentation
 author: Anders Berkeman, Carl Drougge, and Sofia Hörberg
 ---
-[Updated 2020-02-25]<br>
-[Updated 2020-07-13]
+[Last updated 2020-10-12]
 
 This HOWTO shows how to install and test the Accelerator.
 
@@ -22,7 +21,7 @@ ax init
 ax server &
 ax run tests
 # inspect the results in a browser:
-ax board
+ax board-server
 # point browser to http://localhost:8520
 ```
 
@@ -127,7 +126,7 @@ slices: 8
 
 ```text
 workdirs:
-        dev /home/ab/myproject/workdirs/dev
+        dev ./workdirs/dev
 ```
 
 A workdir is where jobs and their output is stored.  Workdirs can be
@@ -155,7 +154,7 @@ default.  It is not mandatory, but it is good practice to use it.
 
 ```text
 method packages:
-        dev
+        dev auto-discover
         accelerator.standard_methods
         accelerator.test_methods
 ```
@@ -171,7 +170,7 @@ then two packages from the Accelerator installation:
 
 ### result and input directories
 ```text
-result directory: /home/ab/myproject/results
+result directory: ./results
 input directory: # /some/path where you want import methods to look.
 ```
 
@@ -240,7 +239,7 @@ this and make sure all character encoding tests are run successfully.
 Start the *board* server
 
 ```
-ax board
+ax board-server
 ```
 
 and point a browser to [http://localhost:8520](http://localhost:8520).
@@ -269,16 +268,7 @@ The `dev/` directory is actually a Python package, that and thus it
 contains an `__init__.py` file.
 
 The directory contains one example method `a_example.py` and one
-example build script `build.py`.  It also contains the mandatory
-`methods.conf` file which specifies which methods in the package that
-should be executable.  In this case it c contains the single line
-
-```text
-example
-```
-
-indicating that `a_example.py` is indeed executable in the current
-project.
+example build script `build.py`.
 
 In order to run the example, type
 
@@ -301,9 +291,4 @@ and install
 cd accelerator
 ./setup.py build
 ./setup.py install
-```
-
-On a clean Debian-based system, install dependencies using
-```shell
-apt-get install python3-cffi
 ```
