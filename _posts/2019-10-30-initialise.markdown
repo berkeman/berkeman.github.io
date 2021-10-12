@@ -5,7 +5,7 @@ date:   2019-10-30 00:00:00
 categories: documentation
 author: Anders Berkeman, Carl Drougge, and Sofia Hörberg
 ---
-[Last updated 2020-10-12]
+[Last updated 2021-10-12]
 
 This HOWTO shows how to install and test the Accelerator.
 
