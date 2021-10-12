@@ -253,7 +253,7 @@ There are several ways to inspect a job.
  - Using the Accelerator Board web server and inspect jobs and
    datasets from your web browser.  Launch it by typing  
 
-   `ax board`
+   `ax board-server`
 
    and connect to it using a web browser pointing to
 
