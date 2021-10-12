@@ -100,12 +100,12 @@ In code, it may look like this
 ```python
 def main(urd):
     job1 = urd.build('method1')
-    job2 = urd.build('method2', jobs=dict(pred=job1))
-    job3 = urd.build('method3', jobs=dict(pred=job2))
-    job4 = urd.build('method4', jobs=dict(pred=job1))
-    job5 = urd.build('method5', jobs=dict(pred=job1))
-    job6 = urd.build('method6', jobs=dict(pred1=job4, pred2=job5))
-    job7 = urd.build('method7', jobs=dict(pred1=job3, pred2=job6))
+    job2 = urd.build('method2', pred=job1)
+    job3 = urd.build('method3', pred=job2)
+    job4 = urd.build('method4', pred=job1)
+    job5 = urd.build('method5', pred=job1)
+    job6 = urd.build('method6', pred1=job4, pred2=job5)
+    job7 = urd.build('method7', pred1=job3, pred2=job6)
 ```
 
 The build system is somewhat similar to traditional "Makefiles", with
