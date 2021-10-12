@@ -5,6 +5,7 @@ date:   2020-07-13 00:00:00
 categories: example
 author: Anders Berkeman, Carl Drougge, and Sofia Hörberg
 ---
+[Last updated 2021-10-12]
 
 Urd is the Norse goddess of the past.  It is also the name of the
 Accelerator's database that keeps track of built jobs and their
@@ -106,19 +107,19 @@ dev.build_importchain
 
 # Inspection
 
-There are two commands available for looking at various aspects of
-datasets: `dsinfo` and `dsgrep`.
+There are three commands available for looking at various aspects of
+datasets: `ds`, `cat`, and `grep`.
 
 
 
 ## Dataset Information
 
-`dsinfo` is used to get information about a dataset or dataset chain.
+`ds` is used to get information about a dataset or dataset chain.
 
 To investigate the default dataset (and its chain `-c`)  of job `dev-2`, run
 
 ```
-% ax dsinfo dev-2 -c
+% ax ds dev-2 -c
 ```
 
 which will return something similar to
@@ -164,40 +165,36 @@ that all columns are untyped, i.e. are of type `bytes`.  Ideally, the
 dataset should be typed using the `dataset_type` method.  More about
 this in an upcoming post.)
 
-Try `ax dsinfo --help` for more options.
+Try `ax ds --help` for more options.
 
 
 
 ## List and Find Data in a Dataset
 
-The `dsgrep` command is similar to `grep`, and it can be used to find
-and show data in a dataset.
+The `grep` command is similar to the `grep` shell command, and it can
+be used to find and show data in a dataset.
 
 ```bash
-% ax dsgrep <regexp> <dataset> <columns>
+% ax grep <regexp> <dataset> <columns>
 ```
 
-The `<columns>` option is optional, and `<regexp>` is an extended `grep`
-regular expression.
-
-The `dsgrep` command can be used to print _all_ data in a dataset.
-This is done using the regular expression "`.`" that matches any character.
+The `<columns>` option is optional, and `<regexp>` is an extended
+`grep` regular expression.
 
 ```bash
-% ax dsgrep . dev-2 | head
+% ax grep 4 dev-2 passenger_count
+```
+
+
+The `cat` command can be used to print _all_ data (or a specified set
+of columns) in dataset(s).
+
+```bash
+% ax cat dev-2 | head
 ```
 
 (The pipe to `head` is used to limit the number of output lines to
 ten.)
-
-It is also possible to limit search to one or a subset of
-all columns
-
-```
-% ax dsgrep . dev-2 tip_amount | head
-```
-
-that will print ten lines from the `tip_amount` column.
 
 Again, use the `--help` option to get a list of all options.
 
