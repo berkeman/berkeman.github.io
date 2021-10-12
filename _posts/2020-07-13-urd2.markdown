@@ -5,6 +5,7 @@ date:   2020-07-13 00:00:00
 categories: example
 author: Anders Berkeman, Carl Drougge, and Sofia Hörberg
 ---
+[Last updated 2021-10-12]
 
 Urd is the Norse goddess of the past.  It is also the name of the
 Accelerator's database that keeps track of built jobs and their
@@ -145,28 +146,23 @@ so if the script is named `build_import.py`, we do
 ## Inspecting the Urd Database
 
 Now, let us investigate what has been stored in the Urd database.  We
-use the `ax curl`-command to talk directly to the Urd server.
+use the `ax urd`-command to talk directly to the Urd server.
 
 First, let us list all the Urd lists.
 
 ```
-% ax curl list
-[
-    "<user>/import",
-]
-	
+% ax urd
+<user>/import
 ```
 
 There is only one urd list, named `import`, recorded.  Let us list all
 its timestamps:
 
 ```
-% ax curl <user>/import/since/0
-[
-    "2009-01",
-    "2009-02",
-    "2009-03"
-]
+% ax urd import/since/0
+2009-01
+2009-02
+2009-03
 ```
 
 (We asked for all timestamps are larger than '0'.  All valid
@@ -176,26 +172,19 @@ only more recent entries.)
 We can look at a single entry like this
 
 ```
-% ax curl <user>/import/2009-01
-{
-    "timestamp": "2020-01",
-    "user": "<user>",
-    "build": "import",
-    "joblist": [
-        [
-	    "csvimport",
-	    "dev-0"
-	]
-    ],
-    "deps": {},
-    "caption": ""
-}
+% ax urd import/2009-01
+timestamp: 2020-01
+caption  :
+deps     :
+JobList(
+   [  0] csvimport : dev-0
+)
 ```								    
 
 What is returned here in pretty printed JSON is basically the Urd
 session object that is returned by `urd.latest()` and its siblings.
 
-(If we want to see the latest entry only there is a shortcut `ax curl <list>/latest`.)
+(If we want to see the latest entry only there is a shortcut `ax urd <list>`.)
 
 
 
@@ -251,51 +240,29 @@ To see this dependency, we run the build script above and then we take
 a look at Urd.
 
 ```
-% ax curl list
-[
-    "<user>/import",
-    "<user>/process"
-]
+% ax urd
+<user>/import
+<user>/process
 ```
 
 A new Urd-list `process` has been created.  What timestamps does it contain?
 
 ```
-% ax curl <user>/process/since/0
-[
-    "2009-03"
-]
+% ax urd process/since/0
+2009-03
 ```
 
 Same timestamp as the last import job, from where we fetched the
 dataset chain we used as input.  The Urd session:
 
 ```
-% ax curl <user>/process/2009-03
-{
-    "timestamp": "2009-03",
-    "build": "process",
-    "user": "<user>",
-    "joblist": [
-        [
-            "process",
-            "dev-3"
-        ]
-    ],
-    "caption": "",
-    "deps": {
-        "<user>/import": {
-            "caption": "",
-            "joblist": [
-                [
-                    "csvimport",
-                    "dev-2"
-                ]
-            ],
-            "timestamp": "2009-03"
-        }
-    }
-}
+% ax urd process/2009-03
+timestamp: 2009-03
+caption  :
+deps     : <user>/import/2009-03
+JobList(
+   [  0] process : dev-3
+)
 ```
 
 Here we can see the jobid to the `process` job, which is `dev-3`, as
