@@ -5,6 +5,7 @@ date:   2020-07-13 00:00:00
 categories: example
 author: Anders Berkeman, Carl Drougge, and Sofia Hörberg
 ---
+[Last updated 2021-10-12]
 
 Urd is the Norse goddess of the past.  It is also the name of the
 Accelerator's database that keeps track of built jobs and their
@@ -110,59 +111,42 @@ the running `append` session.
 Now we have two Urd lists
 
 ```
-% ax curl list
-[
-    "<user>/import",
-    "<user>/append",
-]
+% ax urd
+<user>/import
+<user>/append
 ```
 
 And here are all sessions stored in them
 
 ```
-% ax curl <user>/import/since/0
-[
-    "2009-01",
-    "2009-02",
-    "2009-03"
-]
-% ax curl <user>/append/since/0
-[
-    "2009-01",
-    "2009-02",
-    "2009-03"
-]
+% ax curl import/since/0
+2009-01
+2009-02
+2009-03
+
+% ax curl append/since/0
+2009-01
+2009-02
+2009-03
 ```
 
 Looking at the latest job in the `append` list (slightly compacted)
 
 ```
-% ax curl <user>/append/latest
-{
-    "timestamp": "2009-03",
-    "user": "<user>",
-    "build": "append",
-    "joblist": [ ["append", "dev-5"] ],
-    "deps": {
-        "<user>/append": {
-            "caption": "",
-            "joblist": [ ["append", "dev-4"] ],
-            "timestamp": "2009-02"
-        },
-        "<user>/import": {
-            "caption": "",
-            "joblist": [ ["csvimport", "dev-2"] ],
-            "timestamp": "2009-03"
-        }
-    },
-    "caption": ""
-}
+% ax urd append
+timestamp: 2009-03
+caption  :
+deps     : <user>/append/2009-02
+           <user>/import/2009-03
+JobList(
+   [  0] append : dev-5
+)
 ```
 
 Also, have a look at the latest `append` dataset
 
 ```
-% ax dsinfo <job>
+% ax ds :append:
 ```
 
 
