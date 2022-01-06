@@ -14,3 +14,9 @@ The Accelerator on [PyPI](https://pypi.org/project/accelerator/).
 And exax.org's [github page](https://github.com/exaxorg).
 
 Please also see The Accelerator's Blog also hosted here ([exax.org/blog](https://exax.org/blog)).
+
+
+## Conferences
+2020 PyCon SE [Video of Corona Lockdown using Exax: How to Create Animations from Large Datasets](https://www.youtube.com/watch?v=wAMxtuI0Vbc)
+2021 PyData Global [Computations as Assets - a New Approach to Reproducibility and Transparency](https://pydata.org/global2021/schedule/presentation/44/computations-as-assets-a-new-approach-to-reproducibility-and-transparency/)
+
