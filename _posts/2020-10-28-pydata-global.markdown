@@ -9,7 +9,9 @@ author: Anders Berkeman, Carl Drougge, and Sofia Hörberg
 
 ## PyData Global 2021
 
-**NOTE: A recording of the talk will be available from PyData early 2022!**
+Link to recording of talk on [youtube](https://www.youtube.com/watch?v=J4zvLJn3ya8).  
+Link to 60fps Backblaze-data video on [youtube](https://www.youtube.com/watch?v=hW4EqvK2MY0).  
+Link to 60fps New York taxi data video on [youtube](https://www.youtube.com/watch?v=ym34vsnc68w).  
 
 The ExAx open source project from eBay provides reproducibility,
 transparency, and fast parallel processing in Python.  This talk will
