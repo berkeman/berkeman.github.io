@@ -18,7 +18,7 @@ transparency, and fast parallel processing in Python.  This talk will
 show how reproducibility by design actually leads to a simpler and
 faster development process.  To make our examples more interesting, we
 will use relatively large datasets such as those from NYC Taxi and
-Backblaze.  Description
+Backblaze.
 
 
 - Have you ever been struggling to keep order in an increasing set of
