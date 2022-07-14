@@ -7,7 +7,7 @@ permalink: /resources/
 
 [Reference Manual](https://berkeman.github.io/pdf/acc_manual.pdf)  
 
-The Accelerator on [github.com/eBay](https://github.com/ebay/accelerator).  
+The Accelerator on [github.com/exaxorg](https://github.com/exaxorg/accelerator).  
 The Accelerator on [eBay's Tech Blog](https://tech.ebayinc.com/engineering/announcing-the-accelerator-processing-1-000-000-000-lines-per-second-on-a-single-computer).  
 The Accelerator on [Hacker News](https://news.ycombinator.com/item?id=16999441).  
 The Accelerator on [PyPI](https://pypi.org/project/accelerator/).  

@@ -284,7 +284,7 @@ It is also possible to install directly from the git repository.
 
 Clone the repository
 ```sh
-git clone https://github.com/eBay/accelerator
+git clone https://github.com/exaxorg/accelerator
 ```
 and install
 ```sh
