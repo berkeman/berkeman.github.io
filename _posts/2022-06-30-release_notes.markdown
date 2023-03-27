@@ -8,7 +8,7 @@ author: Anders Berkeman, Carl Drougge, and Sofia Hörberg
 
 ## Highlights
 
-- Smart tab mode for `ax grep` .
+- Smart tab mode for `ax grep`.
 - Dicts in `options` can retain key order.
 
 ## ax grep
