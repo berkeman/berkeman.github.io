@@ -6,6 +6,12 @@ categories: changelog
 author: Anders Berkeman, Carl Drougge, and Sofia Hörberg
 ---
 
+## Highlights
+
+- `job.[json_]save()` takes a `background` argument to let your method do
+  other things while saving the file.
+- Many usability tweaks in shell commands and board.
+
 ## Board
 
 - Support for sub-directories in the result directory.
@@ -18,7 +24,7 @@ author: Anders Berkeman, Carl Drougge, and Sofia Hörberg
 
 - `labelsonfirstline` is replaced by a more generic `label_lines`, so multi-line
   labels work (newlines are replaced by spaces).
-- If `labels` is set `label_lines` defaults to 0 (but you can of course set
+- If `labels` is set, `label_lines` defaults to 0 (but you can of course set
   it if needed).
 - Skipped lines (from labels, `comment`, `skip_lines` and `skip_empty_lines`)
   no longer affect the slicing of included lines. (Bad lines are however sliced
@@ -53,7 +59,7 @@ author: Anders Berkeman, Carl Drougge, and Sofia Hörberg
 	- `<` to go one jobid back (e.g. dev-42 ⇨ dev-41)
 	- `>` to go one jobid forward (e.g. dev-42 ⇨ dev-43)
 	- `.item` to follow item in argument `jobs` or `datasets`
-	  (use `.jobs.item` or `.dataset.item` to disambiguate).
+	  (use `.jobs.item` or `.datasets.item` to disambiguate).
 
   These can be chained freely, and accept counts where this makes sense. E.g.
   `dataset_type~5.source^` or equivalently
